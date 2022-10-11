@@ -1,0 +1,6 @@
+C:\Users\lambk\source\repos\WMI_Win32_Query\WMI_Win32_Query\bin\Debug\WMI_Win32_Query.dll
+C:\Users\lambk\source\repos\WMI_Win32_Query\WMI_Win32_Query\bin\Debug\WMI_Win32_Query.pdb
+C:\Users\lambk\source\repos\WMI_Win32_Query\WMI_Win32_Query\obj\Debug\WMI_Win32_Query.csproj.AssemblyReference.cache
+C:\Users\lambk\source\repos\WMI_Win32_Query\WMI_Win32_Query\obj\Debug\WMI_Win32_Query.csproj.CoreCompileInputs.cache
+C:\Users\lambk\source\repos\WMI_Win32_Query\WMI_Win32_Query\obj\Debug\WMI_Win32_Query.dll
+C:\Users\lambk\source\repos\WMI_Win32_Query\WMI_Win32_Query\obj\Debug\WMI_Win32_Query.pdb
