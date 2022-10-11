@@ -12,15 +12,21 @@ namespace WMI_Test
     {
         static void Main(string[] args)
         {
-            //Success Test
+            //Create a list of strings to hold the drive letters
             List<string> drives = DriveQuery.GetDrives();
+
+            //Create a list of libraries to hold the drives information
+            //Each library is a single drive (logical, disk, and partitions information)
             List<Library> drivesLib = new List<Library>();
+
+            //Loop through the drive letters adding the selected drives information to the list of libraries
             foreach (string drive in drives)
             {
+                //Each Call to GetSelected Drive Info adds the entire drives information to the library
                 drivesLib.Add(DriveQuery.GetSelectedDriveInformation(drive));
             }
 
-
+            //Just an example of how to print out the information
             foreach(var drive in drivesLib)
             {
                 foreach(var item in drive)
