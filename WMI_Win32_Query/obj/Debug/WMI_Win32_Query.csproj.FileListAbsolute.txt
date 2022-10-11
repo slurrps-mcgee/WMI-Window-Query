@@ -4,3 +4,9 @@ C:\Users\lambk\source\repos\WMI_Win32_Query\WMI_Win32_Query\obj\Debug\WMI_Win32_
 C:\Users\lambk\source\repos\WMI_Win32_Query\WMI_Win32_Query\obj\Debug\WMI_Win32_Query.csproj.CoreCompileInputs.cache
 C:\Users\lambk\source\repos\WMI_Win32_Query\WMI_Win32_Query\obj\Debug\WMI_Win32_Query.dll
 C:\Users\lambk\source\repos\WMI_Win32_Query\WMI_Win32_Query\obj\Debug\WMI_Win32_Query.pdb
+E:\Programming\3 - GitHub\WMI-Window-Query\WMI_Win32_Query\bin\Debug\WMI_Win32_Query.dll
+E:\Programming\3 - GitHub\WMI-Window-Query\WMI_Win32_Query\bin\Debug\WMI_Win32_Query.pdb
+E:\Programming\3 - GitHub\WMI-Window-Query\WMI_Win32_Query\obj\Debug\WMI_Win32_Query.csproj.AssemblyReference.cache
+E:\Programming\3 - GitHub\WMI-Window-Query\WMI_Win32_Query\obj\Debug\WMI_Win32_Query.csproj.CoreCompileInputs.cache
+E:\Programming\3 - GitHub\WMI-Window-Query\WMI_Win32_Query\obj\Debug\WMI_Win32_Query.dll
+E:\Programming\3 - GitHub\WMI-Window-Query\WMI_Win32_Query\obj\Debug\WMI_Win32_Query.pdb

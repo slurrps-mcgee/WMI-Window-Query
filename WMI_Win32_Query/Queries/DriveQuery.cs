@@ -9,10 +9,13 @@ using WMI_Win32_Query.Collections;
 
 namespace WMI_Win32_Query.Queries
 {
-    public static class DriveQuery
+    public sealed class DriveQuery
     {
-
-        //Gets the drives attached to the computer
+        #region Get Drive and Partition List
+        /// <summary>
+        /// Returns a list of drive letters from drives attached to the system
+        /// </summary>
+        /// <returns>List<string></returns>
         public static List<string> GetDrives()
         {
             //Create a list to hold the drives
@@ -30,54 +33,38 @@ namespace WMI_Win32_Query.Queries
             return driveList;
         }
 
-        //Maybe private??
-        //Gets a list of partitions for a drive providing a drive letter
+        /// <summary>
+        /// Returns a list of partitions for a provided drive letter string EX Format: C:
+        /// </summary>
+        /// <param name="driveLetter"></param>
+        /// <returns>List<string></returns>
         public static List<string> GetPartitions(string driveLetter)
         {
+            ManagementObjectSearcher searcher = new ManagementObjectSearcher();
+
             List<string> partitions = new List<string>();
 
-
-            //Foreach loop to go through the managementObjects in driveQuery
             try
             {
-                //New Query text to search LogicalDisk via drive letter
-                var logicalQueryText = string.Format($"select * from Win32_LogicalDisk where DeviceID = '{driveLetter}'");
-                //Create a new managementObjectSearcher giving it the query
-                var logicalQuery = new ManagementObjectSearcher(logicalQueryText);
+                searcher.Query.QueryString = $"select * from Win32_LogicalDisk where DeviceID = '{driveLetter}'";
 
                 ////////////////////////////////////////////////////LOGICAL DISK////////////////////////////////////////////////////////
-                //Foreach loop to go through the managementObjects in logicalQuery
-                foreach (ManagementObject d in logicalQuery.Get())
+                foreach (ManagementObject d in searcher.Get())
                 {
-                    //New Query text to associate Win32_LogicalDisk to DiskPartition
-                    var partitionQueryText = string.Format("associators of {{{0}}} where AssocClass = Win32_LogicalDiskToPartition", d.Path.RelativePath);
-                    //Create a new managementObjectSearcher giving it the query
-                    var partitionQuery = new ManagementObjectSearcher(partitionQueryText);
+                    searcher.Query.QueryString = $"associators of {{{d.Path.RelativePath}}} where AssocClass = Win32_LogicalDiskToPartition";
 
                     ////////////////////////////////////////////////////PARTITION////////////////////////////////////////////////////////
-                    //Loop to Search the ManagementObjects in the partitionQuery
-                    foreach (ManagementObject p in partitionQuery.Get())
+                    foreach (ManagementObject p in searcher.Get())
                     {
-                        //Get disk number
-                        string diskNum = p.Properties["Name"].Value.ToString().Substring(6, 1); //Disk Number of logical disk partition
-
-                        ////New Query text to search DiskDrive searching the Physical Drive number
-                        var diskDriveQueryText = string.Format($"Select * from Win32_DiskDrive where Name like'%PHYSICALDRIVE{diskNum}'");
-                        //Create a new managementObjectSearcher giving it the query
-                        var diskDriveQuery = new ManagementObjectSearcher(diskDriveQueryText);
+                        searcher.Query.QueryString = $"Select * from Win32_DiskDrive where Name like'%PHYSICALDRIVE{p.Properties["Name"].Value.ToString().Substring(6, 1)}'";
 
                         ////////////////////////////////////////////////////DISK DRIVES////////////////////////////////////////////////////////
-                        //Loop to Search the ManagementObjects in the query
-                        foreach (ManagementObject dd in diskDriveQuery.Get())
+                        foreach (ManagementObject dd in searcher.Get())
                         {
-                            //New query text to associate Win32_DiskDrive to DiskPartition
-                            partitionQueryText = string.Format("associators of {{{0}}} where AssocClass = Win32_DiskDriveToDiskPartition", dd.Path.RelativePath);
-                            //Create a new managementObjectSearcher giving it the query
-                            partitionQuery = new ManagementObjectSearcher(partitionQueryText);
+                            searcher.Query.QueryString = $"associators of {{{dd.Path.RelativePath}}} where AssocClass = Win32_DiskDriveToDiskPartition";
 
                             ////////////////////////////////////////////////////DISK DRIVE PARTITIONS////////////////////////////////////////////////////////
-                            //Disk Partition Details
-                            foreach (ManagementObject pp in partitionQuery.Get())
+                            foreach (ManagementObject pp in searcher.Get())
                             {
                                 partitions.Add(pp.Properties["DeviceID"].Value.ToString().Substring(pp.Properties["DeviceID"].Value.ToString().Length - 1, 1));
                             }//Disk Partitions
@@ -85,41 +72,77 @@ namespace WMI_Win32_Query.Queries
                     }//Logical Partition
                 }//Logical Disk
             }
-            catch (Exception ex)
+            catch
             {
-                //MessageBox.Show
+                throw;
             }
+            finally
+            {
+                searcher.Dispose();
+            }
+
             return partitions;
-        }
-
-        #region Drive Methods
-        //Used to get space calculations
-        public static float TotalSpace(Book dict)
-        {
-            return ConversionToGig(Convert.ToInt64(dict.GetValueByKey("Size")));
-        }
-
-        public static float UsedSpace(Book dict)
-        {
-            return (ConversionToGig(Convert.ToInt64(dict.GetValueByKey("Size"))) - ConversionToGig(Convert.ToInt64(dict.GetValueByKey("FreeSpace"))));
         }
         #endregion
 
-        //Gets all information and all partition info
+        #region Drive Space Calculations
+        /// <summary>
+        /// Calculates a given Book drive Dictionary Total Space
+        /// </summary>
+        /// <param name="dict"></param>
+        /// <returns>float</returns>
+        public static float TotalSpace(Book driveDict)
+        {
+            return ConversionToGig(Convert.ToInt64(driveDict.GetValueByKey("Size")));
+        }
+
+        /// <summary>
+        /// Calculates a given Book drive Dictionary Used Space
+        /// </summary>
+        /// <param name="driveDict"></param>
+        /// <returns>float</returns>
+        public static float UsedSpace(Book driveDict)
+        {
+            return (ConversionToGig(Convert.ToInt64(driveDict.GetValueByKey("Size"))) - ConversionToGig(Convert.ToInt64(driveDict.GetValueByKey("FreeSpace"))));
+        }
+        #endregion
+
+        #region Get Drive or Partition Details
+        /// <summary>
+        /// Returns a Library of Books each book contains a drives Logical, Disk, and Partition information
+        /// </summary>
+        /// <param name="driveLetter"></param>
+        /// <returns></returns>
         public static Library GetSelectedDriveInformation(string driveLetter)
         {
-            string driveNum = "";
-            Library details = new Library();
-            details.Add("Logical", GetLogicalInformation(driveLetter));
-            details.Add("Disk", GetDiskInformation(driveLetter, out driveNum));
+            //Create driveNum variable and initialize it to empty
+            string driveNum = string.Empty;
+            //Create a New Library called driveDetails
+            Library driveDetails = new Library();
 
-            List<string> list = GetPartitions(driveLetter);
-            list.ForEach(x =>
+            try
             {
-                details.Add($"Partition {list.IndexOf(x)}", GetPartitionInformation(driveNum, list.IndexOf(x).ToString()));
-            });
+                driveDetails.Add("Logical", GetLogicalInformation(driveLetter));
+                driveDetails.Add("Disk", GetDiskInformation(driveLetter, out driveNum));
 
-            return details;
+                #region Partitions
+                //Create a List of strings and fill them with the found partitions from the provided driveLetter
+                List<string> partitions = GetPartitions(driveLetter);
+
+                //Loop through the list
+                partitions.ForEach(x =>
+                {
+                    //Add each GetPartitionInformation Book to the Library
+                    driveDetails.Add($"Partition {partitions.IndexOf(x)}", GetPartitionInformation(driveNum, partitions.IndexOf(x).ToString()));
+                });
+                #endregion
+            }
+            catch
+            {
+                throw;
+            }
+            
+            return driveDetails;
         }
 
         //Gets only the selected partition info on top of the other details
@@ -133,28 +156,22 @@ namespace WMI_Win32_Query.Queries
 
             return details;
         }
+        #endregion
 
-        #region Private
+        #region Private Methods
         //Gets Data Table of Logical Drive information
         private static Book GetLogicalInformation(string driveLetter)
         {
-            //DataTable dt = new DataTable();
-            //dt.Columns.Add("Property");
-            //dt.Columns.Add("Value");
+            ManagementObjectSearcher searcher = new ManagementObjectSearcher(driveLetter);
+
             Book logical = new Book();
 
-            //Foreach loop to go through the managementObjects in driveQuery
             try
             {
-                //New Query text to search LogicalDisk via drive letter
-                var logicalQueryText = string.Format($"select * from Win32_LogicalDisk where DeviceID = '{driveLetter}'");
-                //Create a new managementObjectSearcher giving it the query
-                var logicalQuery = new ManagementObjectSearcher(logicalQueryText);
-
+                searcher.Query.QueryString = $"select * from Win32_LogicalDisk where DeviceID = '{driveLetter}'";
 
                 ////////////////////////////////////////////////////LOGICAL DISK////////////////////////////////////////////////////////
-                //Foreach loop to go through the managementObjects in logicalQuery
-                foreach (ManagementObject d in logicalQuery.Get())
+                foreach (ManagementObject d in searcher.Get())
                 {
                     logical.Add("Logical Disk", d.Properties["name"].Value);
                     logical.Add("OS Drive", ISOSDrive(driveLetter));
@@ -192,23 +209,19 @@ namespace WMI_Win32_Query.Queries
                             {
                                 logical.Add(property.Name, property.Value);
                             }
-                            //if (property.Name == "Size" || property.Name == "FreeSpace")
-                            //{
-                            //    logical.Add(property.Name, $"{DriveInfoClass.ConversionToGig(Convert.ToInt64(property.Value)).ToString("n2")} GB");
-                            //}
-                            //else
-                            //{
-
-                            //}
+                            
+                            //Maybe calc size?
                         }
                     }
-                    //size = DriveInfoClass.ConversionToGig(Convert.ToInt64(d.Properties["Size"].Value));
-                    //freeSpace = DriveInfoClass.ConversionToGig(Convert.ToInt64(d.Properties["FreeSpace"].Value));
                 }//Logical Disk
             }
-            catch (Exception ex)
+            catch
             {
-                //MessageBox.Show
+                throw;
+            }
+            finally
+            {
+                searcher.Dispose();
             }
 
             return logical;
@@ -217,47 +230,30 @@ namespace WMI_Win32_Query.Queries
         //Gets specific Drive information
         private static Book GetDiskInformation(string driveLetter, out string diskNum)
         {
-            //DataTable dt = new DataTable();
-            //dt.Columns.Add("Property");
-            //dt.Columns.Add("Value");
-            Book disk = new Book();
-            diskNum = "";
+            ManagementObjectSearcher searcher = new ManagementObjectSearcher(driveLetter);
 
-            //Foreach loop to go through the managementObjects in driveQuery
+            Book disk = new Book();
+            diskNum = string.Empty;
+
             try
             {
-                #region Query
-                //New Query text to search LogicalDisk via drive letter
-                var logicalQueryText = string.Format($"select * from Win32_LogicalDisk where DeviceID = '{driveLetter}'");
-                //Create a new managementObjectSearcher giving it the query
-                var logicalQuery = new ManagementObjectSearcher(logicalQueryText);
-                #endregion
-                ////////////////////////////////////////////////////LOGICAL DISK////////////////////////////////////////////////////////
-                //Foreach loop to go through the managementObjects in logicalQuery
-                foreach (ManagementObject d in logicalQuery.Get())
-                {
-                    #region Query
-                    //New Query text to associate Win32_LogicalDisk to DiskPartition
-                    var partitionQueryText = string.Format("associators of {{{0}}} where AssocClass = Win32_LogicalDiskToPartition", d.Path.RelativePath);
-                    //Create a new managementObjectSearcher giving it the query
-                    var partitionQuery = new ManagementObjectSearcher(partitionQueryText);
-                    #endregion
-                    ////////////////////////////////////////////////////PARTITION////////////////////////////////////////////////////////
-                    //Loop to Search the ManagementObjects in the partitionQuery
-                    foreach (ManagementObject p in partitionQuery.Get())
-                    {
-                        //Get disk number
-                        diskNum = p.Properties["Name"].Value.ToString().Substring(6, 1); //Disk Number of logical disk partition
+                searcher.Query.QueryString = $"select * from Win32_LogicalDisk where DeviceID = '{driveLetter}'";
 
-                        #region Query
-                        ////New Query text to search DiskDrive searching the Physical Drive number
-                        var diskDriveQueryText = string.Format($"Select * from Win32_DiskDrive where Name like'%PHYSICALDRIVE{diskNum}'");
-                        //Create a new managementObjectSearcher giving it the query
-                        var diskDriveQuery = new ManagementObjectSearcher(diskDriveQueryText);
-                        #endregion
+                ////////////////////////////////////////////////////LOGICAL DISK////////////////////////////////////////////////////////
+                foreach (ManagementObject d in searcher.Get())
+                {
+                    searcher.Query.QueryString = $"associators of {{{d.Path.RelativePath}}} where AssocClass = Win32_LogicalDiskToPartition";
+
+                    ////////////////////////////////////////////////////PARTITION////////////////////////////////////////////////////////
+                    foreach (ManagementObject p in searcher.Get())
+                    {
+                        //Set Disk Number
+                        diskNum = p.Properties["Name"].Value.ToString().Substring(6, 1);
+
+                        searcher.Query.QueryString = $"Select * from Win32_DiskDrive where Name like'%PHYSICALDRIVE{diskNum}'";
+
                         ////////////////////////////////////////////////////DISK DRIVES////////////////////////////////////////////////////////
-                        //Loop to Search the ManagementObjects in the query
-                        foreach (ManagementObject dd in diskDriveQuery.Get())
+                        foreach (ManagementObject dd in searcher.Get())
                         {
                             disk.Add("Disk Drive", dd.Properties["name"].Value);
                             disk.Add("Drive Type", DriveType(Convert.ToInt32(diskNum)));
@@ -307,10 +303,15 @@ namespace WMI_Win32_Query.Queries
                         }//Disk Drive
                     }//Logical Partition
                 }//Logical Disk
+
             }
-            catch (Exception ex)
+            catch
             {
-                //MessageBox.Show
+                throw;
+            }
+            finally
+            {
+                searcher.Dispose();
             }
 
             return disk;
@@ -318,77 +319,78 @@ namespace WMI_Win32_Query.Queries
 
         private static Book GetPartitionInformation(string driveNum, string partitionNum)
         {
-            //DataTable dt = new DataTable();
-            //dt.Columns.Add("Property");
-            //dt.Columns.Add("Value");
+            ManagementObjectSearcher searcher = new ManagementObjectSearcher(driveNum);
+
             Book partition = new Book();
 
-            //New query text to associate Win32_DiskDrive to DiskPartition
-            var partitionQueryText = string.Format($"Select * from Win32_DiskPartition where DeviceId = 'Disk #{driveNum}, Partition #{partitionNum}'");
-            //Create a new managementObjectSearcher giving it the query
-            var partitionQuery = new ManagementObjectSearcher(partitionQueryText);
-
-            ////////////////////////////////////////////////////DISK DRIVE PARTITIONS////////////////////////////////////////////////////////
-            //Disk Partition Details
-            foreach (ManagementObject pp in partitionQuery.Get())
+            try
             {
-                partition.Add("Partition", pp.Properties["name"].Value);
-                foreach (var property in pp.Properties)
+                searcher.Query.QueryString = $"Select * from Win32_DiskPartition where DeviceId = 'Disk #{driveNum}, Partition #{partitionNum}'";
+
+                ////////////////////////////////////////////////////DISK DRIVE PARTITIONS////////////////////////////////////////////////////////
+                //Disk Partition Details
+                foreach (ManagementObject pp in searcher.Get())
                 {
-                    if (property.Value == null || property.Value.ToString() == string.Empty)
+                    partition.Add("Partition", pp.Properties["name"].Value);
+                    foreach (var property in pp.Properties)
                     {
-                        partition.Add(property.Name, "N/A");
-                    }
-                    else
-                    {
-                        if (property.Name == "Size" || property.Name == "FreeSpace")
+                        if (property.Value == null || property.Value.ToString() == string.Empty)
                         {
-                            partition.Add(property.Name, $"{ConversionToGig(Convert.ToInt64(property.Value)).ToString("n2")} GB");
+                            partition.Add(property.Name, "N/A");
                         }
                         else
                         {
-                            //Check for arrays and print out
-                            if (property.IsArray && property.Value != null)
+                            if (property.Name == "Size" || property.Name == "FreeSpace")
                             {
-                                string temp = "";
-                                //Explicit cast value to array
-                                Array array = (Array)property.Value;
-                                //Loop through the array
-                                foreach (var item in array)
-                                {
-                                    //Check if first item
-                                    if (temp != "")
-                                    {
-                                        temp += $", {item.ToString()}";
-                                    }
-                                    else
-                                    {
-                                        temp += $"{item.ToString()}";
-                                    }
-
-                                }
-                                partition.Add(property.Name, temp);
+                                partition.Add(property.Name, $"{ConversionToGig(Convert.ToInt64(property.Value)).ToString("n2")} GB");
                             }
                             else
                             {
-                                partition.Add(property.Name, property.Value);
+                                //Check for arrays and print out
+                                if (property.IsArray && property.Value != null)
+                                {
+                                    string temp = "";
+                                    //Explicit cast value to array
+                                    Array array = (Array)property.Value;
+                                    //Loop through the array
+                                    foreach (var item in array)
+                                    {
+                                        //Check if first item
+                                        if (temp != "")
+                                        {
+                                            temp += $", {item.ToString()}";
+                                        }
+                                        else
+                                        {
+                                            temp += $"{item.ToString()}";
+                                        }
+
+                                    }
+                                    partition.Add(property.Name, temp);
+                                }
+                                else
+                                {
+                                    partition.Add(property.Name, property.Value);
+                                }
                             }
                         }
                     }
-                }
-            }//Disk Partitions
-            ////Sorting the Table
-            //DataView dv = dt.DefaultView;
-            //dv.Sort = "Property";
-            //DataTable sortedDT = dv.ToTable();
-
+                }//Disk Partitions
+            }
+            catch
+            {
+                throw;
+            }
+            finally
+            {
+                searcher.Dispose();
+            }
 
             return partition;
         }
         #endregion
 
-        //Helper Functions
-
+        #region Public Methods
         #region Detect OS Drive
         public static bool ISOSDrive(string driveLetter)
         {
@@ -413,11 +415,16 @@ namespace WMI_Win32_Query.Queries
         #endregion
 
         #region Drive Type
-        //Some test code to get the drive type SSD HDD ect...
-        private static string DriveType(int driveNumber)
+        /// <summary>
+        /// Returns the drive type based on the driveNumber provided
+        /// </summary>
+        /// <param name="driveNumber"></param>
+        /// <returns>string</returns>
+        public static string DriveType(int driveNumber)
         {
             ManagementScope scope = new ManagementScope(@"\\.\root\microsoft\windows\storage");
             ManagementObjectSearcher searcher = new ManagementObjectSearcher("SELECT * FROM MSFT_PhysicalDisk where DeviceId = " + driveNumber.ToString());
+
             string type = "";
             scope.Connect();
             searcher.Scope = scope;
@@ -452,27 +459,33 @@ namespace WMI_Win32_Query.Queries
             }
             catch
             {
-
+                throw;
             }
-
-            searcher.Dispose();
+            finally
+            {
+                searcher.Dispose();
+            }
 
             return type;
         }
         #endregion
 
         #region Conversion Functions
-        #region Conversion
+        #region Conversion Variables
         //Constants for conveersions of different byt sizes
-        const float FLOAT_GIG_CONVERSION = 1073741824f; //Holds the float conversion number of GB per bit
-        const float FLOAT_TERA_CONVERSION = 0.0009765625F;//Holds the float conversion number for TB per bit
+        private const float FLOAT_GIG_CONVERSION = 1073741824f; //Holds the float conversion number of GB per bit
+        private const float FLOAT_TERA_CONVERSION = 0.0009765625F;//Holds the float conversion number for TB per bit
         #endregion
 
-        //Convert bytes to Gigabytes used to display correct drive information
+        /// <summary>
+        /// Converts a provided Megabyte float to Gigabytes
+        /// </summary>
+        /// <param name="conversionNum"></param>
+        /// <returns>float</returns>
         public static float ConversionToGig(float conversionNum)
         {
             //Pre: Needs conversionNum to be initialized
-            //Pose: Returns gigConversion number to the program
+            //Post: Returns gigConversion number to the program
             //Purpose: To convert the bytes number that is incoming to gigabytes
 
             //Set the gigConversion to 0
@@ -484,11 +497,15 @@ namespace WMI_Win32_Query.Queries
             return gigConversion; //Returns the variable gigConversion
         }//End ConversionToGig
 
-        //Convert bytes to TeraBytes used to display correct drive information
+        /// <summary>
+        /// Converts a provided Gigabyte float to Terabytes
+        /// </summary>
+        /// <param name="ConversionNum"></param>
+        /// <returns>float</returns>
         public static float ConversionToTer(float ConversionNum)
         {
             //Pre: Needs conversionNum to be initialized
-            //Pose: Returns teraConversion number to the program
+            //Post: Returns teraConversion number to the program
             //Purpose: To convert the bytes number that is incoming to terabytes
 
             //Set the teraConversion to 0
@@ -499,6 +516,7 @@ namespace WMI_Win32_Query.Queries
 
             return teraConversion;
         }//End ConversionToTer
+        #endregion
         #endregion
     }
 }

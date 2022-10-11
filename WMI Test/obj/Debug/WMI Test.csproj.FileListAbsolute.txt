@@ -9,3 +9,14 @@ C:\Users\lambk\source\repos\WMI_Win32_Query\WMI Test\obj\Debug\WMI Test.csproj.C
 C:\Users\lambk\source\repos\WMI_Win32_Query\WMI Test\obj\Debug\WMI Test.csproj.CopyComplete
 C:\Users\lambk\source\repos\WMI_Win32_Query\WMI Test\obj\Debug\WMI Test.exe
 C:\Users\lambk\source\repos\WMI_Win32_Query\WMI Test\obj\Debug\WMI Test.pdb
+E:\Programming\3 - GitHub\WMI-Window-Query\WMI Test\bin\Debug\WMI Test.exe.config
+E:\Programming\3 - GitHub\WMI-Window-Query\WMI Test\bin\Debug\WMI Test.exe
+E:\Programming\3 - GitHub\WMI-Window-Query\WMI Test\bin\Debug\WMI Test.pdb
+E:\Programming\3 - GitHub\WMI-Window-Query\WMI Test\bin\Debug\WMI_Win32_Query.dll
+E:\Programming\3 - GitHub\WMI-Window-Query\WMI Test\bin\Debug\WMI_Win32_Query.pdb
+E:\Programming\3 - GitHub\WMI-Window-Query\WMI Test\obj\Debug\WMI Test.csproj.AssemblyReference.cache
+E:\Programming\3 - GitHub\WMI-Window-Query\WMI Test\obj\Debug\WMI Test.csproj.SuggestedBindingRedirects.cache
+E:\Programming\3 - GitHub\WMI-Window-Query\WMI Test\obj\Debug\WMI Test.csproj.CoreCompileInputs.cache
+E:\Programming\3 - GitHub\WMI-Window-Query\WMI Test\obj\Debug\WMI Test.csproj.CopyComplete
+E:\Programming\3 - GitHub\WMI-Window-Query\WMI Test\obj\Debug\WMI Test.exe
+E:\Programming\3 - GitHub\WMI-Window-Query\WMI Test\obj\Debug\WMI Test.pdb
