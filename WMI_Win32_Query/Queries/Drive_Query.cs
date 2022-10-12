@@ -110,11 +110,11 @@ namespace WMI_Win32_Query.Queries
         }
         #endregion
 
-        #region Get Drive or Partition Details
+        #region Get Selected Drive or All Drives Information
         /// <summary>
         /// Returns a list of drive libraries for each drive detected in the system
         /// </summary>
-        /// <returns>List</returns>
+        /// <returns>List<Win32_Library></returns>
         public static List<Win32_Library> GetAllDrivesInformation()
         {
             //Create a list of strings to hold the drive letters
@@ -138,7 +138,7 @@ namespace WMI_Win32_Query.Queries
         /// Returns a Library of Books each book contains a drives Logical, Disk, and Partition information
         /// </summary>
         /// <param name="driveLetter"></param>
-        /// <returns></returns>
+        /// <returns>Win32_Library</returns>
         public static Win32_Library GetSelectedDriveInformation(string driveLetter)
         {
             //Create driveNum variable and initialize it to empty
@@ -171,22 +171,14 @@ namespace WMI_Win32_Query.Queries
             
             return driveDetails;
         }
-
-        //Gets only the selected partition info on top of the other details
-        public static Win32_Library GetSelectedDrivePartitionDetails(string driveLetter, string partitionNum)
-        {
-            Win32_Library details = new Win32_Library();
-            string diskNum = "";
-            details.Add("Logical", GetLogicalInformation(driveLetter));
-            details.Add("Disk", GetDiskInformation(driveLetter, out diskNum));
-            details.Add("Partition", GetPartitionInformation(diskNum, partitionNum));
-
-            return details;
-        }
         #endregion
 
         #region Private Methods
-        //Gets Data Table of Logical Drive information
+        /// <summary>
+        /// Returns a Win32_Book of properties from the Win32 LogicalDisk Class
+        /// </summary>
+        /// <param name="driveLetter"></param>
+        /// <returns>Win32_Book</returns>
         private static Win32_Book GetLogicalInformation(string driveLetter)
         {
             ManagementObjectSearcher searcher = new ManagementObjectSearcher(driveLetter);
@@ -254,7 +246,12 @@ namespace WMI_Win32_Query.Queries
             return logical;
         }
 
-        //Gets specific Drive information
+        /// <summary>
+        /// Returns a Win32_Book of properties from the Win32 DiskDrive Class
+        /// </summary>
+        /// <param name="driveLetter"></param>
+        /// <param name="diskNum"></param>
+        /// <returns>Win32_Book</returns>
         private static Win32_Book GetDiskInformation(string driveLetter, out string diskNum)
         {
             ManagementObjectSearcher searcher = new ManagementObjectSearcher(driveLetter);
@@ -344,6 +341,12 @@ namespace WMI_Win32_Query.Queries
             return disk;
         }
 
+        /// <summary>
+        /// Returns a Win32_Book of properties from the Win32 DiskPartition Class
+        /// </summary>
+        /// <param name="driveNum"></param>
+        /// <param name="partitionNum"></param>
+        /// <returns>Win32_Book</returns>
         private static Win32_Book GetPartitionInformation(string driveNum, string partitionNum)
         {
             ManagementObjectSearcher searcher = new ManagementObjectSearcher(driveNum);
