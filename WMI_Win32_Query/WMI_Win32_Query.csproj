@@ -42,10 +42,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Queries\DriveQuery.cs" />
-    <Compile Include="Collection\Book.cs" />
-    <Compile Include="Collection\Library.cs" />
+    <Compile Include="Queries\Drive_Query.cs" />
+    <Compile Include="Collections\Win32_Book.cs" />
+    <Compile Include="Collections\Win32_Library.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Helpers\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

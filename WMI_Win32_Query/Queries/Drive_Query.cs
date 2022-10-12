@@ -9,7 +9,10 @@ using WMI_Win32_Query.Collections;
 
 namespace WMI_Win32_Query.Queries
 {
-    public sealed class DriveQuery
+    /// <summary>
+    /// A Class to Query Win32 classes DiskDrive, DiskPartition, and LogicalDisk
+    /// </summary>
+    public sealed class Drive_Query
     {
         #region Get Drive and Partition List
         /// <summary>
@@ -91,7 +94,7 @@ namespace WMI_Win32_Query.Queries
         /// </summary>
         /// <param name="dict"></param>
         /// <returns>float</returns>
-        public static float TotalSpace(Book driveDict)
+        public static float TotalSpace(Win32_Book driveDict)
         {
             return ConversionToGig(Convert.ToInt64(driveDict.GetValueByKey("Size")));
         }
@@ -101,7 +104,7 @@ namespace WMI_Win32_Query.Queries
         /// </summary>
         /// <param name="driveDict"></param>
         /// <returns>float</returns>
-        public static float UsedSpace(Book driveDict)
+        public static float UsedSpace(Win32_Book driveDict)
         {
             return (ConversionToGig(Convert.ToInt64(driveDict.GetValueByKey("Size"))) - ConversionToGig(Convert.ToInt64(driveDict.GetValueByKey("FreeSpace"))));
         }
@@ -109,21 +112,45 @@ namespace WMI_Win32_Query.Queries
 
         #region Get Drive or Partition Details
         /// <summary>
+        /// Returns a list of drive libraries for each drive detected in the system
+        /// </summary>
+        /// <returns>List</returns>
+        public static List<Win32_Library> GetAllDrivesInformation()
+        {
+            //Create a list of strings to hold the drive letters
+            List<string> drives = Drive_Query.GetDrives();
+
+            //Create a list of libraries to hold the drives information
+            //Each library is a single drive (logical, disk, and partitions information)
+            List<Win32_Library> drivesLib = new List<Win32_Library>();
+
+            //Loop through the drive letters adding the selected drives information to the list of libraries
+            foreach (string drive in drives)
+            {
+                //Each Call to GetSelected Drive Info adds the entire drives information to the library
+                drivesLib.Add(Drive_Query.GetSelectedDriveInformation(drive));
+            }
+
+            return drivesLib;
+        }
+
+        /// <summary>
         /// Returns a Library of Books each book contains a drives Logical, Disk, and Partition information
         /// </summary>
         /// <param name="driveLetter"></param>
         /// <returns></returns>
-        public static Library GetSelectedDriveInformation(string driveLetter)
+        public static Win32_Library GetSelectedDriveInformation(string driveLetter)
         {
             //Create driveNum variable and initialize it to empty
             string driveNum = string.Empty;
             //Create a New Library called driveDetails
-            Library driveDetails = new Library();
+            Win32_Library driveDetails = new Win32_Library();
 
             try
             {
                 driveDetails.Add("Logical", GetLogicalInformation(driveLetter));
                 driveDetails.Add("Disk", GetDiskInformation(driveLetter, out driveNum));
+                
 
                 #region Partitions
                 //Create a List of strings and fill them with the found partitions from the provided driveLetter
@@ -146,9 +173,9 @@ namespace WMI_Win32_Query.Queries
         }
 
         //Gets only the selected partition info on top of the other details
-        public static Library GetSelectedDrivePartitionDetails(string driveLetter, string partitionNum)
+        public static Win32_Library GetSelectedDrivePartitionDetails(string driveLetter, string partitionNum)
         {
-            Library details = new Library();
+            Win32_Library details = new Win32_Library();
             string diskNum = "";
             details.Add("Logical", GetLogicalInformation(driveLetter));
             details.Add("Disk", GetDiskInformation(driveLetter, out diskNum));
@@ -160,11 +187,11 @@ namespace WMI_Win32_Query.Queries
 
         #region Private Methods
         //Gets Data Table of Logical Drive information
-        private static Book GetLogicalInformation(string driveLetter)
+        private static Win32_Book GetLogicalInformation(string driveLetter)
         {
             ManagementObjectSearcher searcher = new ManagementObjectSearcher(driveLetter);
 
-            Book logical = new Book();
+            Win32_Book logical = new Win32_Book();
 
             try
             {
@@ -228,11 +255,11 @@ namespace WMI_Win32_Query.Queries
         }
 
         //Gets specific Drive information
-        private static Book GetDiskInformation(string driveLetter, out string diskNum)
+        private static Win32_Book GetDiskInformation(string driveLetter, out string diskNum)
         {
             ManagementObjectSearcher searcher = new ManagementObjectSearcher(driveLetter);
 
-            Book disk = new Book();
+            Win32_Book disk = new Win32_Book();
             diskNum = string.Empty;
 
             try
@@ -317,11 +344,11 @@ namespace WMI_Win32_Query.Queries
             return disk;
         }
 
-        private static Book GetPartitionInformation(string driveNum, string partitionNum)
+        private static Win32_Book GetPartitionInformation(string driveNum, string partitionNum)
         {
             ManagementObjectSearcher searcher = new ManagementObjectSearcher(driveNum);
 
-            Book partition = new Book();
+            Win32_Book partition = new Win32_Book();
 
             try
             {
@@ -517,6 +544,7 @@ namespace WMI_Win32_Query.Queries
             return teraConversion;
         }//End ConversionToTer
         #endregion
+
         #endregion
     }
 }

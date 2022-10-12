@@ -15,39 +15,16 @@ namespace WMI_Test
             var watch = new System.Diagnostics.Stopwatch();
             watch.Start();
 
-            //Create a list of strings to hold the drive letters
-            List<string> drives = DriveQuery.GetDrives();
+            //Get All Drives Information
+            List<Win32_Library> drivesLib = Drive_Query.GetAllDrivesInformation();
+            //Print each item to Console
+            drivesLib.ForEach(drive => drive.PrintLibraryBook());
 
-            ////List<string> partitions = DriveQuery.GetPartitions("C:");
+            //Get Single Drive Information
+            Win32_Library driveLib = Drive_Query.GetSelectedDriveInformation("C:");
+            //Print library to console
+            driveLib.PrintLibraryBook();
 
-            //drives.ForEach(drive =>
-            //{
-            //    Console.WriteLine($"{drive}");
-            //    DriveQuery.GetPartitions(drive).ForEach(partition => Console.WriteLine(partition));
-            //    Console.WriteLine();
-            //});
-
-            //Create a list of libraries to hold the drives information
-            //Each library is a single drive (logical, disk, and partitions information)
-            List<Library> drivesLib = new List<Library>();
-
-            //Loop through the drive letters adding the selected drives information to the list of libraries
-            foreach (string drive in drives)
-            {
-                //Each Call to GetSelected Drive Info adds the entire drives information to the library
-                drivesLib.Add(DriveQuery.GetSelectedDriveInformation(drive));
-            }
-
-            //Just an example of how to print out the information
-            foreach (var drive in drivesLib)
-            {
-                foreach (var item in drive)
-                {
-                    Console.WriteLine(item.Key);
-                    item.Value.Print();
-                    Console.WriteLine();
-                }
-            }
 
             watch.Stop();
             Console.WriteLine($"{watch.ElapsedMilliseconds} milliseconds");
