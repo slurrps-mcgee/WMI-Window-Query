@@ -2,10 +2,12 @@
 A C# library to query windows WMI information and return it encased in dictionaries. Right now it only queries drive information on a system but I will be adding all of the WMI information over time. There is an example project with how to use the library inside the solution. Please reference that for how to use the library. I mostly made this for a project I was working on but found using dictionaries to hold this information to be super easy to query and useful to use.
 
 ## Usage
-1 - Use GetDrives method to get all the drive letters attached to the computer
-2 - Create a new Library for a specific drive or List<Win32_Library> if wanting to get all drives information
-3 - Set the library to the return method GetSelectedDriveInformation(using the drive letter from the list of drives) or GetAllDrivesInformation to retrieve all drives information without selecting a specific drive
-4 - Use the new filled dictionary of information from the query as needed
+1. Use GetDrives method to get all the drive letters attached to the computer
+2. Create a new Library for a specific drive or List<Win32_Library> if wanting to get all drives information
+3. Set the library to the return method GetSelectedDriveInformation(using the drive letter from the list of drives) or GetAllDrivesInformation to retrieve all drives information without selecting a specific drive
+4. Use the new filled dictionary of information from the query as needed
+
+Please see the project WMI_TEST to see further examples of usage.
 
 ### Queries
 
