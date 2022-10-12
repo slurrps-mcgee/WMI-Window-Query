@@ -3,8 +3,8 @@ A C# library to query windows WMI information and return it encased in dictionar
 
 ### Uses Two Collections to gather WMI information from the system (Working class names)
 
-- Library - Holds Books information
-- Books - Holds Details about the book or WMI Query in this instance
+- Win32_Library - Holds Books information
+- Win32_Books - Holds Details about the book or WMI Query in this instance
 
 ### Queries
 
@@ -12,17 +12,23 @@ A C# library to query windows WMI information and return it encased in dictionar
 
 ## Usage
 1 - Use GetDrives method to get all the drive letters attached to the computer
-2 - Create a new Library for a specific drive or List<Library> if wanting to get all drives information
-3 - Set the library to the return method GetSelectedDriveInformation(using the drive letter from the list of drives)
+2 - Create a new Library for a specific drive or List<Win32_Library> if wanting to get all drives information
+3 - Set the library to the return method GetSelectedDriveInformation(using the drive letter from the list of drives) or GetAllDrivesInformation to retrieve all drives information without selecting a specific drive
 4 - Use the new filled dictionary of information from the query as needed
 
-### DriveQuery Methods
+### Custom Collections
+#### Win32_Library
 
+#### Win32_Book
+
+
+### DriveQuery Methods
 Public Methods
 - List<string> GetDrives
 - List<string> GetPartitions(string driveLetter)
-- Library GetSelectedDriveInformation(string driveLetter)
-- Library GetSelectedDrivePartitionDetails(string driveLetter, string partitionNum)
+- List<Win32_Library> GetAllDrivesInformation()
+- Win32_Library GetSelectedDriveInformation(string driveLetter)
+- Win32_Library GetSelectedDrivePartitionDetails(string driveLetter, string partitionNum)
 - float TotalSpace(Book dict)
 - float UsedSpace(Book dict)
 Helper Methods
@@ -32,6 +38,6 @@ Helper Methods
 - float ConversionToTer(float conversionNum)
 
 Private Methods
-- Library GetLogicalInformation(string driveLetter)
-- Library GetDiskInformation(string driveLetter, out string diskNum)
-- Library GetPartitionInformation(string driveNum, string partitionNum)
+- Win32_Library GetLogicalInformation(string driveLetter)
+- Win32_Library GetDiskInformation(string driveLetter, out string diskNum)
+- Win32_Library GetPartitionInformation(string driveNum, string partitionNum)
