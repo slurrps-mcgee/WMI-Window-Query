@@ -28,7 +28,6 @@ Public Methods
 - List<string> GetPartitions(string driveLetter)
 - List<Win32_Library> GetAllDrivesInformation()
 - Win32_Library GetSelectedDriveInformation(string driveLetter)
-- Win32_Library GetSelectedDrivePartitionDetails(string driveLetter, string partitionNum)
 - float TotalSpace(Book dict)
 - float UsedSpace(Book dict)
 Helper Methods
