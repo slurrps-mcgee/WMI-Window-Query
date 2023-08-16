@@ -1,5 +1,5 @@
 # WMI-Window-Query
-A C# library to query windows WMI Win32 Provider information and return it encased in dictionaries. Right now it only queries drive information on a system but I will be adding all of the Win32 Provider information over time. There is an example project with how to use the library inside the solution. Please reference that for how to use the library. I mostly made this for a project I was working on but found using dictionaries to hold this information to be super easy to query and useful to use.
+A C# library to query windows WMI Win32 Provider information and return it encased in dictionaries. Please refer to microsofts documentation for win32 providers https://learn.microsoft.com/en-us/windows/win32/cimwin32prov/win32-provider. Right now it only queries drive information on a system but I will be adding all of the Win32 Provider information over time. There is an example project with how to use the library inside the solution. Please reference that for how to use the library. I mostly made this for a project I was working on but found using dictionaries to hold this information to be super easy to query and useful to use.
 
 ## Usage
 1. Use GetDrives method to get all the drive letters attached to the computer
