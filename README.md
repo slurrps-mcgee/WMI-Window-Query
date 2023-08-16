@@ -38,3 +38,7 @@ Private Methods
 - Win32_Library GetLogicalInformation(string driveLetter)
 - Win32_Library GetDiskInformation(string driveLetter, out string diskNum)
 - Win32_Library GetPartitionInformation(string driveNum, string partitionNum)
+
+## ToDo
+- Add Helper Class for helper methods such as Conversion methods for byte sizes
+- Add ability to search specific Win32 providers besides disk queries such as system queries like CPU, Memory, Motherboard, etc this can be a abstract class and have each inherit this as win32 providers share some details
