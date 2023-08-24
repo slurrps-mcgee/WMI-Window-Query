@@ -41,4 +41,6 @@ Private Methods
 
 ## ToDo
 - Add Helper Class for helper methods such as Conversion methods for byte sizes
-- Add ability to search specific Win32 providers besides disk queries such as system queries like CPU, Memory, Motherboard, etc this can be a abstract class and have each inherit this as win32 providers share some details
+- Add ability to search specific Win32 providers besides disk queries such as system queries like CPU, Memory, Motherboard, etc this can be a abstract class and have each inherit this as win32 providers share some details. This will be implemented by creating a method that excepts a Win32_Provider enum value to get a Win32_book containing all properties of the specified Provider
+- Add Static Enum for different Win32 Providers called Win32_Providers for ability to search any provider not just disk related information.
+- Will also provide a list of said providers in documentation.
