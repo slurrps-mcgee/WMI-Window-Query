@@ -14,6 +14,7 @@ namespace WMI_Win32_Query.Collections
     {
         private IDictionary<string, object> _dictionary;
 
+        #region Constructors
         public Win32_Book()
         {
             _dictionary = new Dictionary<string, object>();
@@ -23,7 +24,9 @@ namespace WMI_Win32_Query.Collections
         {
             _dictionary = dictionary;
         }
+        #endregion
 
+        #region Add Remove
         public void Add(string key, object value)
         {
             _dictionary.Add(key, value);
@@ -33,7 +36,9 @@ namespace WMI_Win32_Query.Collections
         {
             _dictionary.Remove(key);
         }
+        #endregion
 
+        #region Get Information
         public object GetValueByKey(string key)
         {
             object value;
@@ -52,7 +57,19 @@ namespace WMI_Win32_Query.Collections
         {
             return _dictionary.Values;
         }
+        #endregion
 
+        public void Clear()
+        {
+            _dictionary.Clear();
+        }
+
+        public int Count()
+        {
+            return _dictionary.Count;
+        }
+
+        #region Console
         //Printing
         //Print Book
         public void PrintBook()
@@ -62,11 +79,7 @@ namespace WMI_Win32_Query.Collections
                 Console.WriteLine($"{key.Key}: {key.Value}");
             }
         }
-
-        //public IDictionary<string, object> GetDictionary()
-        //{
-        //    return _dictionary;
-        //}
+        #endregion
 
         #region Enumeration
         //Enumeration Implementation

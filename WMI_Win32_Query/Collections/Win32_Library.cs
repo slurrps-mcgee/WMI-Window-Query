@@ -14,6 +14,7 @@ namespace WMI_Win32_Query.Collections
     {
         private IDictionary<string, Win32_Book> _dictionary;
 
+        #region Constructors
         public Win32_Library()
         {
             _dictionary = new Dictionary<string, Win32_Book>();
@@ -23,7 +24,9 @@ namespace WMI_Win32_Query.Collections
         {
             _dictionary = dictionary;
         }
+        #endregion
 
+        #region Add Remove
         public void Add(string key, Win32_Book value)
         {
             _dictionary.Add(key, value);
@@ -33,7 +36,9 @@ namespace WMI_Win32_Query.Collections
         {
             _dictionary.Remove(key);
         }
+        #endregion
 
+        #region Get Information
         public Win32_Book GetValueByKey(string key)
         {
             Win32_Book value;
@@ -52,6 +57,7 @@ namespace WMI_Win32_Query.Collections
         {
             return _dictionary.Values;
         }
+        #endregion
 
         public void Clear()
         {
@@ -63,6 +69,7 @@ namespace WMI_Win32_Query.Collections
             return _dictionary.Count;
         }
 
+        #region Console
         //Printing
         //Print Library
         public void PrintLibrary()
@@ -84,25 +91,7 @@ namespace WMI_Win32_Query.Collections
                 Console.WriteLine();
             }
         }
-
-        //public static void PrintLibraryList(List<Win32_Library> lib)
-        //{
-        //    //Just an example of how to print out the information
-        //    foreach (var book in lib)
-        //    {
-        //        foreach (var item in book)
-        //        {
-        //            Console.WriteLine(item.Key);
-        //            item.Value.PrintBook();
-        //            Console.WriteLine();
-        //        }
-        //    }
-        //}
-
-        //public IDictionary<string, Book> GetDictionary()
-        //{
-        //    return _dictionary;
-        //}
+        #endregion
 
         #region Enumeration
         //Enumeration Implementation
