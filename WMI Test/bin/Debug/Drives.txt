@@ -1,0 +1,2440 @@
+[
+  [
+    {
+      "Key": "Logical",
+      "Value": [
+        {
+          "Key": "Logical Disk",
+          "Value": "C:"
+        },
+        {
+          "Key": "OS Drive",
+          "Value": true
+        },
+        {
+          "Key": "Access",
+          "Value": 0
+        },
+        {
+          "Key": "Availability",
+          "Value": "N/A"
+        },
+        {
+          "Key": "BlockSize",
+          "Value": "N/A"
+        },
+        {
+          "Key": "Caption",
+          "Value": "C:"
+        },
+        {
+          "Key": "Compressed",
+          "Value": false
+        },
+        {
+          "Key": "ConfigManagerErrorCode",
+          "Value": "N/A"
+        },
+        {
+          "Key": "ConfigManagerUserConfig",
+          "Value": "N/A"
+        },
+        {
+          "Key": "CreationClassName",
+          "Value": "Win32_LogicalDisk"
+        },
+        {
+          "Key": "Description",
+          "Value": "Local Fixed Disk"
+        },
+        {
+          "Key": "DeviceID",
+          "Value": "C:"
+        },
+        {
+          "Key": "DriveType",
+          "Value": 3
+        },
+        {
+          "Key": "ErrorCleared",
+          "Value": "N/A"
+        },
+        {
+          "Key": "ErrorDescription",
+          "Value": "N/A"
+        },
+        {
+          "Key": "ErrorMethodology",
+          "Value": "N/A"
+        },
+        {
+          "Key": "FileSystem",
+          "Value": "NTFS"
+        },
+        {
+          "Key": "FreeSpace",
+          "Value": 662026551296
+        },
+        {
+          "Key": "InstallDate",
+          "Value": "N/A"
+        },
+        {
+          "Key": "LastErrorCode",
+          "Value": "N/A"
+        },
+        {
+          "Key": "MaximumComponentLength",
+          "Value": 255
+        },
+        {
+          "Key": "MediaType",
+          "Value": 12
+        },
+        {
+          "Key": "Name",
+          "Value": "C:"
+        },
+        {
+          "Key": "NumberOfBlocks",
+          "Value": "N/A"
+        },
+        {
+          "Key": "PNPDeviceID",
+          "Value": "N/A"
+        },
+        {
+          "Key": "PowerManagementCapabilities",
+          "Value": "N/A"
+        },
+        {
+          "Key": "PowerManagementSupported",
+          "Value": "N/A"
+        },
+        {
+          "Key": "ProviderName",
+          "Value": "N/A"
+        },
+        {
+          "Key": "Purpose",
+          "Value": "N/A"
+        },
+        {
+          "Key": "QuotasDisabled",
+          "Value": "N/A"
+        },
+        {
+          "Key": "QuotasIncomplete",
+          "Value": "N/A"
+        },
+        {
+          "Key": "QuotasRebuilding",
+          "Value": "N/A"
+        },
+        {
+          "Key": "Size",
+          "Value": 999425044480
+        },
+        {
+          "Key": "Status",
+          "Value": "N/A"
+        },
+        {
+          "Key": "StatusInfo",
+          "Value": "N/A"
+        },
+        {
+          "Key": "SupportsDiskQuotas",
+          "Value": false
+        },
+        {
+          "Key": "SupportsFileBasedCompression",
+          "Value": true
+        },
+        {
+          "Key": "SystemCreationClassName",
+          "Value": "Win32_ComputerSystem"
+        },
+        {
+          "Key": "SystemName",
+          "Value": "SLURRPS-DT"
+        },
+        {
+          "Key": "VolumeDirty",
+          "Value": "N/A"
+        },
+        {
+          "Key": "VolumeName",
+          "Value": "Local Disk (WDSN850)"
+        },
+        {
+          "Key": "VolumeSerialNumber",
+          "Value": "74743377"
+        }
+      ]
+    },
+    {
+      "Key": "Disk",
+      "Value": [
+        {
+          "Key": "Disk Drive",
+          "Value": "\\\\.\\PHYSICALDRIVE0"
+        },
+        {
+          "Key": "Drive Type",
+          "Value": "SSD"
+        },
+        {
+          "Key": "Availability",
+          "Value": "N/A"
+        },
+        {
+          "Key": "BytesPerSector",
+          "Value": 512
+        },
+        {
+          "Key": "Capabilities",
+          "Value": "3, 4"
+        },
+        {
+          "Key": "CapabilityDescriptions",
+          "Value": "Random Access, Supports Writing"
+        },
+        {
+          "Key": "Caption",
+          "Value": "WDS100T1XHE-00AFY0"
+        },
+        {
+          "Key": "CompressionMethod",
+          "Value": "N/A"
+        },
+        {
+          "Key": "ConfigManagerErrorCode",
+          "Value": 0
+        },
+        {
+          "Key": "ConfigManagerUserConfig",
+          "Value": false
+        },
+        {
+          "Key": "CreationClassName",
+          "Value": "Win32_DiskDrive"
+        },
+        {
+          "Key": "DefaultBlockSize",
+          "Value": "N/A"
+        },
+        {
+          "Key": "Description",
+          "Value": "Disk drive"
+        },
+        {
+          "Key": "DeviceID",
+          "Value": "\\\\.\\PHYSICALDRIVE0"
+        },
+        {
+          "Key": "ErrorCleared",
+          "Value": "N/A"
+        },
+        {
+          "Key": "ErrorDescription",
+          "Value": "N/A"
+        },
+        {
+          "Key": "ErrorMethodology",
+          "Value": "N/A"
+        },
+        {
+          "Key": "FirmwareRevision",
+          "Value": "614900WD"
+        },
+        {
+          "Key": "Index",
+          "Value": 0
+        },
+        {
+          "Key": "InstallDate",
+          "Value": "N/A"
+        },
+        {
+          "Key": "InterfaceType",
+          "Value": "SCSI"
+        },
+        {
+          "Key": "LastErrorCode",
+          "Value": "N/A"
+        },
+        {
+          "Key": "Manufacturer",
+          "Value": "(Standard disk drives)"
+        },
+        {
+          "Key": "MaxBlockSize",
+          "Value": "N/A"
+        },
+        {
+          "Key": "MaxMediaSize",
+          "Value": "N/A"
+        },
+        {
+          "Key": "MediaLoaded",
+          "Value": true
+        },
+        {
+          "Key": "MediaType",
+          "Value": "Fixed hard disk media"
+        },
+        {
+          "Key": "MinBlockSize",
+          "Value": "N/A"
+        },
+        {
+          "Key": "Model",
+          "Value": "WDS100T1XHE-00AFY0"
+        },
+        {
+          "Key": "Name",
+          "Value": "\\\\.\\PHYSICALDRIVE0"
+        },
+        {
+          "Key": "NeedsCleaning",
+          "Value": "N/A"
+        },
+        {
+          "Key": "NumberOfMediaSupported",
+          "Value": "N/A"
+        },
+        {
+          "Key": "Partitions",
+          "Value": 3
+        },
+        {
+          "Key": "PNPDeviceID",
+          "Value": "SCSI\\DISK&VEN_NVME&PROD_WDS100T1XHE-00AF\\5&2069C8B2&0&000000"
+        },
+        {
+          "Key": "PowerManagementCapabilities",
+          "Value": "N/A"
+        },
+        {
+          "Key": "PowerManagementSupported",
+          "Value": "N/A"
+        },
+        {
+          "Key": "SCSIBus",
+          "Value": 0
+        },
+        {
+          "Key": "SCSILogicalUnit",
+          "Value": 0
+        },
+        {
+          "Key": "SCSIPort",
+          "Value": 2
+        },
+        {
+          "Key": "SCSITargetId",
+          "Value": 0
+        },
+        {
+          "Key": "SectorsPerTrack",
+          "Value": 63
+        },
+        {
+          "Key": "SerialNumber",
+          "Value": "E823_8FA6_BF53_0001_001B_448B_45A8_1A71."
+        },
+        {
+          "Key": "Signature",
+          "Value": "N/A"
+        },
+        {
+          "Key": "Size",
+          "Value": "931.51 GB"
+        },
+        {
+          "Key": "Status",
+          "Value": "OK"
+        },
+        {
+          "Key": "StatusInfo",
+          "Value": "N/A"
+        },
+        {
+          "Key": "SystemCreationClassName",
+          "Value": "Win32_ComputerSystem"
+        },
+        {
+          "Key": "SystemName",
+          "Value": "SLURRPS-DT"
+        },
+        {
+          "Key": "TotalCylinders",
+          "Value": 121601
+        },
+        {
+          "Key": "TotalHeads",
+          "Value": 255
+        },
+        {
+          "Key": "TotalSectors",
+          "Value": 1953520065
+        },
+        {
+          "Key": "TotalTracks",
+          "Value": 31008255
+        },
+        {
+          "Key": "TracksPerCylinder",
+          "Value": 255
+        }
+      ]
+    },
+    {
+      "Key": "Partition 0",
+      "Value": [
+        {
+          "Key": "Partition",
+          "Value": "Disk #0, Partition #0"
+        },
+        {
+          "Key": "Access",
+          "Value": "N/A"
+        },
+        {
+          "Key": "Availability",
+          "Value": "N/A"
+        },
+        {
+          "Key": "BlockSize",
+          "Value": 512
+        },
+        {
+          "Key": "Bootable",
+          "Value": true
+        },
+        {
+          "Key": "BootPartition",
+          "Value": true
+        },
+        {
+          "Key": "Caption",
+          "Value": "Disk #0, Partition #0"
+        },
+        {
+          "Key": "ConfigManagerErrorCode",
+          "Value": "N/A"
+        },
+        {
+          "Key": "ConfigManagerUserConfig",
+          "Value": "N/A"
+        },
+        {
+          "Key": "CreationClassName",
+          "Value": "Win32_DiskPartition"
+        },
+        {
+          "Key": "Description",
+          "Value": "GPT: System"
+        },
+        {
+          "Key": "DeviceID",
+          "Value": "Disk #0, Partition #0"
+        },
+        {
+          "Key": "DiskIndex",
+          "Value": 0
+        },
+        {
+          "Key": "ErrorCleared",
+          "Value": "N/A"
+        },
+        {
+          "Key": "ErrorDescription",
+          "Value": "N/A"
+        },
+        {
+          "Key": "ErrorMethodology",
+          "Value": "N/A"
+        },
+        {
+          "Key": "HiddenSectors",
+          "Value": "N/A"
+        },
+        {
+          "Key": "Index",
+          "Value": 0
+        },
+        {
+          "Key": "InstallDate",
+          "Value": "N/A"
+        },
+        {
+          "Key": "LastErrorCode",
+          "Value": "N/A"
+        },
+        {
+          "Key": "Name",
+          "Value": "Disk #0, Partition #0"
+        },
+        {
+          "Key": "NumberOfBlocks",
+          "Value": 204800
+        },
+        {
+          "Key": "PNPDeviceID",
+          "Value": "N/A"
+        },
+        {
+          "Key": "PowerManagementCapabilities",
+          "Value": "N/A"
+        },
+        {
+          "Key": "PowerManagementSupported",
+          "Value": "N/A"
+        },
+        {
+          "Key": "PrimaryPartition",
+          "Value": true
+        },
+        {
+          "Key": "Purpose",
+          "Value": "N/A"
+        },
+        {
+          "Key": "RewritePartition",
+          "Value": "N/A"
+        },
+        {
+          "Key": "Size",
+          "Value": "0.10 GB"
+        },
+        {
+          "Key": "StartingOffset",
+          "Value": 1048576
+        },
+        {
+          "Key": "Status",
+          "Value": "N/A"
+        },
+        {
+          "Key": "StatusInfo",
+          "Value": "N/A"
+        },
+        {
+          "Key": "SystemCreationClassName",
+          "Value": "Win32_ComputerSystem"
+        },
+        {
+          "Key": "SystemName",
+          "Value": "SLURRPS-DT"
+        },
+        {
+          "Key": "Type",
+          "Value": "GPT: System"
+        }
+      ]
+    },
+    {
+      "Key": "Partition 1",
+      "Value": [
+        {
+          "Key": "Partition",
+          "Value": "Disk #0, Partition #1"
+        },
+        {
+          "Key": "Access",
+          "Value": "N/A"
+        },
+        {
+          "Key": "Availability",
+          "Value": "N/A"
+        },
+        {
+          "Key": "BlockSize",
+          "Value": 512
+        },
+        {
+          "Key": "Bootable",
+          "Value": false
+        },
+        {
+          "Key": "BootPartition",
+          "Value": false
+        },
+        {
+          "Key": "Caption",
+          "Value": "Disk #0, Partition #1"
+        },
+        {
+          "Key": "ConfigManagerErrorCode",
+          "Value": "N/A"
+        },
+        {
+          "Key": "ConfigManagerUserConfig",
+          "Value": "N/A"
+        },
+        {
+          "Key": "CreationClassName",
+          "Value": "Win32_DiskPartition"
+        },
+        {
+          "Key": "Description",
+          "Value": "GPT: Basic Data"
+        },
+        {
+          "Key": "DeviceID",
+          "Value": "Disk #0, Partition #1"
+        },
+        {
+          "Key": "DiskIndex",
+          "Value": 0
+        },
+        {
+          "Key": "ErrorCleared",
+          "Value": "N/A"
+        },
+        {
+          "Key": "ErrorDescription",
+          "Value": "N/A"
+        },
+        {
+          "Key": "ErrorMethodology",
+          "Value": "N/A"
+        },
+        {
+          "Key": "HiddenSectors",
+          "Value": "N/A"
+        },
+        {
+          "Key": "Index",
+          "Value": 1
+        },
+        {
+          "Key": "InstallDate",
+          "Value": "N/A"
+        },
+        {
+          "Key": "LastErrorCode",
+          "Value": "N/A"
+        },
+        {
+          "Key": "Name",
+          "Value": "Disk #0, Partition #1"
+        },
+        {
+          "Key": "NumberOfBlocks",
+          "Value": 1952002048
+        },
+        {
+          "Key": "PNPDeviceID",
+          "Value": "N/A"
+        },
+        {
+          "Key": "PowerManagementCapabilities",
+          "Value": "N/A"
+        },
+        {
+          "Key": "PowerManagementSupported",
+          "Value": "N/A"
+        },
+        {
+          "Key": "PrimaryPartition",
+          "Value": true
+        },
+        {
+          "Key": "Purpose",
+          "Value": "N/A"
+        },
+        {
+          "Key": "RewritePartition",
+          "Value": "N/A"
+        },
+        {
+          "Key": "Size",
+          "Value": "930.79 GB"
+        },
+        {
+          "Key": "StartingOffset",
+          "Value": 122683392
+        },
+        {
+          "Key": "Status",
+          "Value": "N/A"
+        },
+        {
+          "Key": "StatusInfo",
+          "Value": "N/A"
+        },
+        {
+          "Key": "SystemCreationClassName",
+          "Value": "Win32_ComputerSystem"
+        },
+        {
+          "Key": "SystemName",
+          "Value": "SLURRPS-DT"
+        },
+        {
+          "Key": "Type",
+          "Value": "GPT: Basic Data"
+        }
+      ]
+    },
+    {
+      "Key": "Partition 2",
+      "Value": [
+        {
+          "Key": "Partition",
+          "Value": "Disk #0, Partition #2"
+        },
+        {
+          "Key": "Access",
+          "Value": "N/A"
+        },
+        {
+          "Key": "Availability",
+          "Value": "N/A"
+        },
+        {
+          "Key": "BlockSize",
+          "Value": 512
+        },
+        {
+          "Key": "Bootable",
+          "Value": false
+        },
+        {
+          "Key": "BootPartition",
+          "Value": false
+        },
+        {
+          "Key": "Caption",
+          "Value": "Disk #0, Partition #2"
+        },
+        {
+          "Key": "ConfigManagerErrorCode",
+          "Value": "N/A"
+        },
+        {
+          "Key": "ConfigManagerUserConfig",
+          "Value": "N/A"
+        },
+        {
+          "Key": "CreationClassName",
+          "Value": "Win32_DiskPartition"
+        },
+        {
+          "Key": "Description",
+          "Value": "GPT: Unknown"
+        },
+        {
+          "Key": "DeviceID",
+          "Value": "Disk #0, Partition #2"
+        },
+        {
+          "Key": "DiskIndex",
+          "Value": 0
+        },
+        {
+          "Key": "ErrorCleared",
+          "Value": "N/A"
+        },
+        {
+          "Key": "ErrorDescription",
+          "Value": "N/A"
+        },
+        {
+          "Key": "ErrorMethodology",
+          "Value": "N/A"
+        },
+        {
+          "Key": "HiddenSectors",
+          "Value": "N/A"
+        },
+        {
+          "Key": "Index",
+          "Value": 2
+        },
+        {
+          "Key": "InstallDate",
+          "Value": "N/A"
+        },
+        {
+          "Key": "LastErrorCode",
+          "Value": "N/A"
+        },
+        {
+          "Key": "Name",
+          "Value": "Disk #0, Partition #2"
+        },
+        {
+          "Key": "NumberOfBlocks",
+          "Value": 1280000
+        },
+        {
+          "Key": "PNPDeviceID",
+          "Value": "N/A"
+        },
+        {
+          "Key": "PowerManagementCapabilities",
+          "Value": "N/A"
+        },
+        {
+          "Key": "PowerManagementSupported",
+          "Value": "N/A"
+        },
+        {
+          "Key": "PrimaryPartition",
+          "Value": false
+        },
+        {
+          "Key": "Purpose",
+          "Value": "N/A"
+        },
+        {
+          "Key": "RewritePartition",
+          "Value": "N/A"
+        },
+        {
+          "Key": "Size",
+          "Value": "0.61 GB"
+        },
+        {
+          "Key": "StartingOffset",
+          "Value": 999547731968
+        },
+        {
+          "Key": "Status",
+          "Value": "N/A"
+        },
+        {
+          "Key": "StatusInfo",
+          "Value": "N/A"
+        },
+        {
+          "Key": "SystemCreationClassName",
+          "Value": "Win32_ComputerSystem"
+        },
+        {
+          "Key": "SystemName",
+          "Value": "SLURRPS-DT"
+        },
+        {
+          "Key": "Type",
+          "Value": "GPT: Unknown"
+        }
+      ]
+    }
+  ],
+  [
+    {
+      "Key": "Logical",
+      "Value": [
+        {
+          "Key": "Logical Disk",
+          "Value": "D:"
+        },
+        {
+          "Key": "OS Drive",
+          "Value": false
+        },
+        {
+          "Key": "Access",
+          "Value": 0
+        },
+        {
+          "Key": "Availability",
+          "Value": "N/A"
+        },
+        {
+          "Key": "BlockSize",
+          "Value": "N/A"
+        },
+        {
+          "Key": "Caption",
+          "Value": "D:"
+        },
+        {
+          "Key": "Compressed",
+          "Value": false
+        },
+        {
+          "Key": "ConfigManagerErrorCode",
+          "Value": "N/A"
+        },
+        {
+          "Key": "ConfigManagerUserConfig",
+          "Value": "N/A"
+        },
+        {
+          "Key": "CreationClassName",
+          "Value": "Win32_LogicalDisk"
+        },
+        {
+          "Key": "Description",
+          "Value": "Local Fixed Disk"
+        },
+        {
+          "Key": "DeviceID",
+          "Value": "D:"
+        },
+        {
+          "Key": "DriveType",
+          "Value": 3
+        },
+        {
+          "Key": "ErrorCleared",
+          "Value": "N/A"
+        },
+        {
+          "Key": "ErrorDescription",
+          "Value": "N/A"
+        },
+        {
+          "Key": "ErrorMethodology",
+          "Value": "N/A"
+        },
+        {
+          "Key": "FileSystem",
+          "Value": "NTFS"
+        },
+        {
+          "Key": "FreeSpace",
+          "Value": 259525902336
+        },
+        {
+          "Key": "InstallDate",
+          "Value": "N/A"
+        },
+        {
+          "Key": "LastErrorCode",
+          "Value": "N/A"
+        },
+        {
+          "Key": "MaximumComponentLength",
+          "Value": 255
+        },
+        {
+          "Key": "MediaType",
+          "Value": 12
+        },
+        {
+          "Key": "Name",
+          "Value": "D:"
+        },
+        {
+          "Key": "NumberOfBlocks",
+          "Value": "N/A"
+        },
+        {
+          "Key": "PNPDeviceID",
+          "Value": "N/A"
+        },
+        {
+          "Key": "PowerManagementCapabilities",
+          "Value": "N/A"
+        },
+        {
+          "Key": "PowerManagementSupported",
+          "Value": "N/A"
+        },
+        {
+          "Key": "ProviderName",
+          "Value": "N/A"
+        },
+        {
+          "Key": "Purpose",
+          "Value": "N/A"
+        },
+        {
+          "Key": "QuotasDisabled",
+          "Value": "N/A"
+        },
+        {
+          "Key": "QuotasIncomplete",
+          "Value": "N/A"
+        },
+        {
+          "Key": "QuotasRebuilding",
+          "Value": "N/A"
+        },
+        {
+          "Key": "Size",
+          "Value": 2000381014016
+        },
+        {
+          "Key": "Status",
+          "Value": "N/A"
+        },
+        {
+          "Key": "StatusInfo",
+          "Value": "N/A"
+        },
+        {
+          "Key": "SupportsDiskQuotas",
+          "Value": false
+        },
+        {
+          "Key": "SupportsFileBasedCompression",
+          "Value": true
+        },
+        {
+          "Key": "SystemCreationClassName",
+          "Value": "Win32_ComputerSystem"
+        },
+        {
+          "Key": "SystemName",
+          "Value": "SLURRPS-DT"
+        },
+        {
+          "Key": "VolumeDirty",
+          "Value": "N/A"
+        },
+        {
+          "Key": "VolumeName",
+          "Value": "AAA Games (980PRO)"
+        },
+        {
+          "Key": "VolumeSerialNumber",
+          "Value": "C8921B8E"
+        }
+      ]
+    },
+    {
+      "Key": "Disk",
+      "Value": [
+        {
+          "Key": "Disk Drive",
+          "Value": "\\\\.\\PHYSICALDRIVE3"
+        },
+        {
+          "Key": "Drive Type",
+          "Value": "SSD"
+        },
+        {
+          "Key": "Availability",
+          "Value": "N/A"
+        },
+        {
+          "Key": "BytesPerSector",
+          "Value": 512
+        },
+        {
+          "Key": "Capabilities",
+          "Value": "3, 4"
+        },
+        {
+          "Key": "CapabilityDescriptions",
+          "Value": "Random Access, Supports Writing"
+        },
+        {
+          "Key": "Caption",
+          "Value": "Samsung SSD 980 PRO 2TB"
+        },
+        {
+          "Key": "CompressionMethod",
+          "Value": "N/A"
+        },
+        {
+          "Key": "ConfigManagerErrorCode",
+          "Value": 0
+        },
+        {
+          "Key": "ConfigManagerUserConfig",
+          "Value": false
+        },
+        {
+          "Key": "CreationClassName",
+          "Value": "Win32_DiskDrive"
+        },
+        {
+          "Key": "DefaultBlockSize",
+          "Value": "N/A"
+        },
+        {
+          "Key": "Description",
+          "Value": "Disk drive"
+        },
+        {
+          "Key": "DeviceID",
+          "Value": "\\\\.\\PHYSICALDRIVE3"
+        },
+        {
+          "Key": "ErrorCleared",
+          "Value": "N/A"
+        },
+        {
+          "Key": "ErrorDescription",
+          "Value": "N/A"
+        },
+        {
+          "Key": "ErrorMethodology",
+          "Value": "N/A"
+        },
+        {
+          "Key": "FirmwareRevision",
+          "Value": "5B2QGXA7"
+        },
+        {
+          "Key": "Index",
+          "Value": 3
+        },
+        {
+          "Key": "InstallDate",
+          "Value": "N/A"
+        },
+        {
+          "Key": "InterfaceType",
+          "Value": "SCSI"
+        },
+        {
+          "Key": "LastErrorCode",
+          "Value": "N/A"
+        },
+        {
+          "Key": "Manufacturer",
+          "Value": "(Standard disk drives)"
+        },
+        {
+          "Key": "MaxBlockSize",
+          "Value": "N/A"
+        },
+        {
+          "Key": "MaxMediaSize",
+          "Value": "N/A"
+        },
+        {
+          "Key": "MediaLoaded",
+          "Value": true
+        },
+        {
+          "Key": "MediaType",
+          "Value": "Fixed hard disk media"
+        },
+        {
+          "Key": "MinBlockSize",
+          "Value": "N/A"
+        },
+        {
+          "Key": "Model",
+          "Value": "Samsung SSD 980 PRO 2TB"
+        },
+        {
+          "Key": "Name",
+          "Value": "\\\\.\\PHYSICALDRIVE3"
+        },
+        {
+          "Key": "NeedsCleaning",
+          "Value": "N/A"
+        },
+        {
+          "Key": "NumberOfMediaSupported",
+          "Value": "N/A"
+        },
+        {
+          "Key": "Partitions",
+          "Value": 1
+        },
+        {
+          "Key": "PNPDeviceID",
+          "Value": "SCSI\\DISK&VEN_NVME&PROD_SAMSUNG_SSD_980\\5&1AB52423&0&000000"
+        },
+        {
+          "Key": "PowerManagementCapabilities",
+          "Value": "N/A"
+        },
+        {
+          "Key": "PowerManagementSupported",
+          "Value": "N/A"
+        },
+        {
+          "Key": "SCSIBus",
+          "Value": 0
+        },
+        {
+          "Key": "SCSILogicalUnit",
+          "Value": 0
+        },
+        {
+          "Key": "SCSIPort",
+          "Value": 5
+        },
+        {
+          "Key": "SCSITargetId",
+          "Value": 0
+        },
+        {
+          "Key": "SectorsPerTrack",
+          "Value": 63
+        },
+        {
+          "Key": "SerialNumber",
+          "Value": "0025_38B2_31A4_22E8."
+        },
+        {
+          "Key": "Signature",
+          "Value": "N/A"
+        },
+        {
+          "Key": "Size",
+          "Value": "1,863.01 GB"
+        },
+        {
+          "Key": "Status",
+          "Value": "OK"
+        },
+        {
+          "Key": "StatusInfo",
+          "Value": "N/A"
+        },
+        {
+          "Key": "SystemCreationClassName",
+          "Value": "Win32_ComputerSystem"
+        },
+        {
+          "Key": "SystemName",
+          "Value": "SLURRPS-DT"
+        },
+        {
+          "Key": "TotalCylinders",
+          "Value": 243201
+        },
+        {
+          "Key": "TotalHeads",
+          "Value": 255
+        },
+        {
+          "Key": "TotalSectors",
+          "Value": 3907024065
+        },
+        {
+          "Key": "TotalTracks",
+          "Value": 62016255
+        },
+        {
+          "Key": "TracksPerCylinder",
+          "Value": 255
+        }
+      ]
+    },
+    {
+      "Key": "Partition 0",
+      "Value": [
+        {
+          "Key": "Partition",
+          "Value": "Disk #3, Partition #0"
+        },
+        {
+          "Key": "Access",
+          "Value": "N/A"
+        },
+        {
+          "Key": "Availability",
+          "Value": "N/A"
+        },
+        {
+          "Key": "BlockSize",
+          "Value": 512
+        },
+        {
+          "Key": "Bootable",
+          "Value": false
+        },
+        {
+          "Key": "BootPartition",
+          "Value": false
+        },
+        {
+          "Key": "Caption",
+          "Value": "Disk #3, Partition #0"
+        },
+        {
+          "Key": "ConfigManagerErrorCode",
+          "Value": "N/A"
+        },
+        {
+          "Key": "ConfigManagerUserConfig",
+          "Value": "N/A"
+        },
+        {
+          "Key": "CreationClassName",
+          "Value": "Win32_DiskPartition"
+        },
+        {
+          "Key": "Description",
+          "Value": "GPT: Basic Data"
+        },
+        {
+          "Key": "DeviceID",
+          "Value": "Disk #3, Partition #0"
+        },
+        {
+          "Key": "DiskIndex",
+          "Value": 3
+        },
+        {
+          "Key": "ErrorCleared",
+          "Value": "N/A"
+        },
+        {
+          "Key": "ErrorDescription",
+          "Value": "N/A"
+        },
+        {
+          "Key": "ErrorMethodology",
+          "Value": "N/A"
+        },
+        {
+          "Key": "HiddenSectors",
+          "Value": "N/A"
+        },
+        {
+          "Key": "Index",
+          "Value": 0
+        },
+        {
+          "Key": "InstallDate",
+          "Value": "N/A"
+        },
+        {
+          "Key": "LastErrorCode",
+          "Value": "N/A"
+        },
+        {
+          "Key": "Name",
+          "Value": "Disk #3, Partition #0"
+        },
+        {
+          "Key": "NumberOfBlocks",
+          "Value": 3906994176
+        },
+        {
+          "Key": "PNPDeviceID",
+          "Value": "N/A"
+        },
+        {
+          "Key": "PowerManagementCapabilities",
+          "Value": "N/A"
+        },
+        {
+          "Key": "PowerManagementSupported",
+          "Value": "N/A"
+        },
+        {
+          "Key": "PrimaryPartition",
+          "Value": true
+        },
+        {
+          "Key": "Purpose",
+          "Value": "N/A"
+        },
+        {
+          "Key": "RewritePartition",
+          "Value": "N/A"
+        },
+        {
+          "Key": "Size",
+          "Value": "1,863.00 GB"
+        },
+        {
+          "Key": "StartingOffset",
+          "Value": 16777216
+        },
+        {
+          "Key": "Status",
+          "Value": "N/A"
+        },
+        {
+          "Key": "StatusInfo",
+          "Value": "N/A"
+        },
+        {
+          "Key": "SystemCreationClassName",
+          "Value": "Win32_ComputerSystem"
+        },
+        {
+          "Key": "SystemName",
+          "Value": "SLURRPS-DT"
+        },
+        {
+          "Key": "Type",
+          "Value": "GPT: Basic Data"
+        }
+      ]
+    }
+  ],
+  [
+    {
+      "Key": "Logical",
+      "Value": [
+        {
+          "Key": "Logical Disk",
+          "Value": "G:"
+        },
+        {
+          "Key": "OS Drive",
+          "Value": false
+        },
+        {
+          "Key": "Access",
+          "Value": 0
+        },
+        {
+          "Key": "Availability",
+          "Value": "N/A"
+        },
+        {
+          "Key": "BlockSize",
+          "Value": "N/A"
+        },
+        {
+          "Key": "Caption",
+          "Value": "G:"
+        },
+        {
+          "Key": "Compressed",
+          "Value": false
+        },
+        {
+          "Key": "ConfigManagerErrorCode",
+          "Value": "N/A"
+        },
+        {
+          "Key": "ConfigManagerUserConfig",
+          "Value": "N/A"
+        },
+        {
+          "Key": "CreationClassName",
+          "Value": "Win32_LogicalDisk"
+        },
+        {
+          "Key": "Description",
+          "Value": "Local Fixed Disk"
+        },
+        {
+          "Key": "DeviceID",
+          "Value": "G:"
+        },
+        {
+          "Key": "DriveType",
+          "Value": 3
+        },
+        {
+          "Key": "ErrorCleared",
+          "Value": "N/A"
+        },
+        {
+          "Key": "ErrorDescription",
+          "Value": "N/A"
+        },
+        {
+          "Key": "ErrorMethodology",
+          "Value": "N/A"
+        },
+        {
+          "Key": "FileSystem",
+          "Value": "NTFS"
+        },
+        {
+          "Key": "FreeSpace",
+          "Value": 781846142976
+        },
+        {
+          "Key": "InstallDate",
+          "Value": "N/A"
+        },
+        {
+          "Key": "LastErrorCode",
+          "Value": "N/A"
+        },
+        {
+          "Key": "MaximumComponentLength",
+          "Value": 255
+        },
+        {
+          "Key": "MediaType",
+          "Value": 12
+        },
+        {
+          "Key": "Name",
+          "Value": "G:"
+        },
+        {
+          "Key": "NumberOfBlocks",
+          "Value": "N/A"
+        },
+        {
+          "Key": "PNPDeviceID",
+          "Value": "N/A"
+        },
+        {
+          "Key": "PowerManagementCapabilities",
+          "Value": "N/A"
+        },
+        {
+          "Key": "PowerManagementSupported",
+          "Value": "N/A"
+        },
+        {
+          "Key": "ProviderName",
+          "Value": "N/A"
+        },
+        {
+          "Key": "Purpose",
+          "Value": "N/A"
+        },
+        {
+          "Key": "QuotasDisabled",
+          "Value": "N/A"
+        },
+        {
+          "Key": "QuotasIncomplete",
+          "Value": "N/A"
+        },
+        {
+          "Key": "QuotasRebuilding",
+          "Value": "N/A"
+        },
+        {
+          "Key": "Size",
+          "Value": 2000381014016
+        },
+        {
+          "Key": "Status",
+          "Value": "N/A"
+        },
+        {
+          "Key": "StatusInfo",
+          "Value": "N/A"
+        },
+        {
+          "Key": "SupportsDiskQuotas",
+          "Value": false
+        },
+        {
+          "Key": "SupportsFileBasedCompression",
+          "Value": true
+        },
+        {
+          "Key": "SystemCreationClassName",
+          "Value": "Win32_ComputerSystem"
+        },
+        {
+          "Key": "SystemName",
+          "Value": "SLURRPS-DT"
+        },
+        {
+          "Key": "VolumeDirty",
+          "Value": "N/A"
+        },
+        {
+          "Key": "VolumeName",
+          "Value": "Other Games (WDSN770)"
+        },
+        {
+          "Key": "VolumeSerialNumber",
+          "Value": "CADD894F"
+        }
+      ]
+    },
+    {
+      "Key": "Disk",
+      "Value": [
+        {
+          "Key": "Disk Drive",
+          "Value": "\\\\.\\PHYSICALDRIVE1"
+        },
+        {
+          "Key": "Drive Type",
+          "Value": "SSD"
+        },
+        {
+          "Key": "Availability",
+          "Value": "N/A"
+        },
+        {
+          "Key": "BytesPerSector",
+          "Value": 512
+        },
+        {
+          "Key": "Capabilities",
+          "Value": "3, 4"
+        },
+        {
+          "Key": "CapabilityDescriptions",
+          "Value": "Random Access, Supports Writing"
+        },
+        {
+          "Key": "Caption",
+          "Value": "WD_BLACK SN770 2TB"
+        },
+        {
+          "Key": "CompressionMethod",
+          "Value": "N/A"
+        },
+        {
+          "Key": "ConfigManagerErrorCode",
+          "Value": 0
+        },
+        {
+          "Key": "ConfigManagerUserConfig",
+          "Value": false
+        },
+        {
+          "Key": "CreationClassName",
+          "Value": "Win32_DiskDrive"
+        },
+        {
+          "Key": "DefaultBlockSize",
+          "Value": "N/A"
+        },
+        {
+          "Key": "Description",
+          "Value": "Disk drive"
+        },
+        {
+          "Key": "DeviceID",
+          "Value": "\\\\.\\PHYSICALDRIVE1"
+        },
+        {
+          "Key": "ErrorCleared",
+          "Value": "N/A"
+        },
+        {
+          "Key": "ErrorDescription",
+          "Value": "N/A"
+        },
+        {
+          "Key": "ErrorMethodology",
+          "Value": "N/A"
+        },
+        {
+          "Key": "FirmwareRevision",
+          "Value": "731100WD"
+        },
+        {
+          "Key": "Index",
+          "Value": 1
+        },
+        {
+          "Key": "InstallDate",
+          "Value": "N/A"
+        },
+        {
+          "Key": "InterfaceType",
+          "Value": "SCSI"
+        },
+        {
+          "Key": "LastErrorCode",
+          "Value": "N/A"
+        },
+        {
+          "Key": "Manufacturer",
+          "Value": "(Standard disk drives)"
+        },
+        {
+          "Key": "MaxBlockSize",
+          "Value": "N/A"
+        },
+        {
+          "Key": "MaxMediaSize",
+          "Value": "N/A"
+        },
+        {
+          "Key": "MediaLoaded",
+          "Value": true
+        },
+        {
+          "Key": "MediaType",
+          "Value": "Fixed hard disk media"
+        },
+        {
+          "Key": "MinBlockSize",
+          "Value": "N/A"
+        },
+        {
+          "Key": "Model",
+          "Value": "WD_BLACK SN770 2TB"
+        },
+        {
+          "Key": "Name",
+          "Value": "\\\\.\\PHYSICALDRIVE1"
+        },
+        {
+          "Key": "NeedsCleaning",
+          "Value": "N/A"
+        },
+        {
+          "Key": "NumberOfMediaSupported",
+          "Value": "N/A"
+        },
+        {
+          "Key": "Partitions",
+          "Value": 1
+        },
+        {
+          "Key": "PNPDeviceID",
+          "Value": "SCSI\\DISK&VEN_NVME&PROD_WD_BLACK_SN770_2\\7&1167EBDF&0&000000"
+        },
+        {
+          "Key": "PowerManagementCapabilities",
+          "Value": "N/A"
+        },
+        {
+          "Key": "PowerManagementSupported",
+          "Value": "N/A"
+        },
+        {
+          "Key": "SCSIBus",
+          "Value": 0
+        },
+        {
+          "Key": "SCSILogicalUnit",
+          "Value": 0
+        },
+        {
+          "Key": "SCSIPort",
+          "Value": 3
+        },
+        {
+          "Key": "SCSITargetId",
+          "Value": 0
+        },
+        {
+          "Key": "SectorsPerTrack",
+          "Value": 63
+        },
+        {
+          "Key": "SerialNumber",
+          "Value": "E823_8FA6_BF53_0001_001B_448B_4EB4_C60A."
+        },
+        {
+          "Key": "Signature",
+          "Value": "N/A"
+        },
+        {
+          "Key": "Size",
+          "Value": "1,863.01 GB"
+        },
+        {
+          "Key": "Status",
+          "Value": "OK"
+        },
+        {
+          "Key": "StatusInfo",
+          "Value": "N/A"
+        },
+        {
+          "Key": "SystemCreationClassName",
+          "Value": "Win32_ComputerSystem"
+        },
+        {
+          "Key": "SystemName",
+          "Value": "SLURRPS-DT"
+        },
+        {
+          "Key": "TotalCylinders",
+          "Value": 243201
+        },
+        {
+          "Key": "TotalHeads",
+          "Value": 255
+        },
+        {
+          "Key": "TotalSectors",
+          "Value": 3907024065
+        },
+        {
+          "Key": "TotalTracks",
+          "Value": 62016255
+        },
+        {
+          "Key": "TracksPerCylinder",
+          "Value": 255
+        }
+      ]
+    },
+    {
+      "Key": "Partition 0",
+      "Value": [
+        {
+          "Key": "Partition",
+          "Value": "Disk #1, Partition #0"
+        },
+        {
+          "Key": "Access",
+          "Value": "N/A"
+        },
+        {
+          "Key": "Availability",
+          "Value": "N/A"
+        },
+        {
+          "Key": "BlockSize",
+          "Value": 512
+        },
+        {
+          "Key": "Bootable",
+          "Value": false
+        },
+        {
+          "Key": "BootPartition",
+          "Value": false
+        },
+        {
+          "Key": "Caption",
+          "Value": "Disk #1, Partition #0"
+        },
+        {
+          "Key": "ConfigManagerErrorCode",
+          "Value": "N/A"
+        },
+        {
+          "Key": "ConfigManagerUserConfig",
+          "Value": "N/A"
+        },
+        {
+          "Key": "CreationClassName",
+          "Value": "Win32_DiskPartition"
+        },
+        {
+          "Key": "Description",
+          "Value": "GPT: Basic Data"
+        },
+        {
+          "Key": "DeviceID",
+          "Value": "Disk #1, Partition #0"
+        },
+        {
+          "Key": "DiskIndex",
+          "Value": 1
+        },
+        {
+          "Key": "ErrorCleared",
+          "Value": "N/A"
+        },
+        {
+          "Key": "ErrorDescription",
+          "Value": "N/A"
+        },
+        {
+          "Key": "ErrorMethodology",
+          "Value": "N/A"
+        },
+        {
+          "Key": "HiddenSectors",
+          "Value": "N/A"
+        },
+        {
+          "Key": "Index",
+          "Value": 0
+        },
+        {
+          "Key": "InstallDate",
+          "Value": "N/A"
+        },
+        {
+          "Key": "LastErrorCode",
+          "Value": "N/A"
+        },
+        {
+          "Key": "Name",
+          "Value": "Disk #1, Partition #0"
+        },
+        {
+          "Key": "NumberOfBlocks",
+          "Value": 3906994176
+        },
+        {
+          "Key": "PNPDeviceID",
+          "Value": "N/A"
+        },
+        {
+          "Key": "PowerManagementCapabilities",
+          "Value": "N/A"
+        },
+        {
+          "Key": "PowerManagementSupported",
+          "Value": "N/A"
+        },
+        {
+          "Key": "PrimaryPartition",
+          "Value": true
+        },
+        {
+          "Key": "Purpose",
+          "Value": "N/A"
+        },
+        {
+          "Key": "RewritePartition",
+          "Value": "N/A"
+        },
+        {
+          "Key": "Size",
+          "Value": "1,863.00 GB"
+        },
+        {
+          "Key": "StartingOffset",
+          "Value": 16777216
+        },
+        {
+          "Key": "Status",
+          "Value": "N/A"
+        },
+        {
+          "Key": "StatusInfo",
+          "Value": "N/A"
+        },
+        {
+          "Key": "SystemCreationClassName",
+          "Value": "Win32_ComputerSystem"
+        },
+        {
+          "Key": "SystemName",
+          "Value": "SLURRPS-DT"
+        },
+        {
+          "Key": "Type",
+          "Value": "GPT: Basic Data"
+        }
+      ]
+    }
+  ],
+  [
+    {
+      "Key": "Logical",
+      "Value": [
+        {
+          "Key": "Logical Disk",
+          "Value": "H:"
+        },
+        {
+          "Key": "OS Drive",
+          "Value": false
+        },
+        {
+          "Key": "Access",
+          "Value": 0
+        },
+        {
+          "Key": "Availability",
+          "Value": "N/A"
+        },
+        {
+          "Key": "BlockSize",
+          "Value": "N/A"
+        },
+        {
+          "Key": "Caption",
+          "Value": "H:"
+        },
+        {
+          "Key": "Compressed",
+          "Value": false
+        },
+        {
+          "Key": "ConfigManagerErrorCode",
+          "Value": "N/A"
+        },
+        {
+          "Key": "ConfigManagerUserConfig",
+          "Value": "N/A"
+        },
+        {
+          "Key": "CreationClassName",
+          "Value": "Win32_LogicalDisk"
+        },
+        {
+          "Key": "Description",
+          "Value": "Local Fixed Disk"
+        },
+        {
+          "Key": "DeviceID",
+          "Value": "H:"
+        },
+        {
+          "Key": "DriveType",
+          "Value": 3
+        },
+        {
+          "Key": "ErrorCleared",
+          "Value": "N/A"
+        },
+        {
+          "Key": "ErrorDescription",
+          "Value": "N/A"
+        },
+        {
+          "Key": "ErrorMethodology",
+          "Value": "N/A"
+        },
+        {
+          "Key": "FileSystem",
+          "Value": "NTFS"
+        },
+        {
+          "Key": "FreeSpace",
+          "Value": 896229613568
+        },
+        {
+          "Key": "InstallDate",
+          "Value": "N/A"
+        },
+        {
+          "Key": "LastErrorCode",
+          "Value": "N/A"
+        },
+        {
+          "Key": "MaximumComponentLength",
+          "Value": 255
+        },
+        {
+          "Key": "MediaType",
+          "Value": 12
+        },
+        {
+          "Key": "Name",
+          "Value": "H:"
+        },
+        {
+          "Key": "NumberOfBlocks",
+          "Value": "N/A"
+        },
+        {
+          "Key": "PNPDeviceID",
+          "Value": "N/A"
+        },
+        {
+          "Key": "PowerManagementCapabilities",
+          "Value": "N/A"
+        },
+        {
+          "Key": "PowerManagementSupported",
+          "Value": "N/A"
+        },
+        {
+          "Key": "ProviderName",
+          "Value": "N/A"
+        },
+        {
+          "Key": "Purpose",
+          "Value": "N/A"
+        },
+        {
+          "Key": "QuotasDisabled",
+          "Value": "N/A"
+        },
+        {
+          "Key": "QuotasIncomplete",
+          "Value": "N/A"
+        },
+        {
+          "Key": "QuotasRebuilding",
+          "Value": "N/A"
+        },
+        {
+          "Key": "Size",
+          "Value": 1000186310656
+        },
+        {
+          "Key": "Status",
+          "Value": "N/A"
+        },
+        {
+          "Key": "StatusInfo",
+          "Value": "N/A"
+        },
+        {
+          "Key": "SupportsDiskQuotas",
+          "Value": false
+        },
+        {
+          "Key": "SupportsFileBasedCompression",
+          "Value": true
+        },
+        {
+          "Key": "SystemCreationClassName",
+          "Value": "Win32_ComputerSystem"
+        },
+        {
+          "Key": "SystemName",
+          "Value": "SLURRPS-DT"
+        },
+        {
+          "Key": "VolumeDirty",
+          "Value": "N/A"
+        },
+        {
+          "Key": "VolumeName",
+          "Value": "Artimus Drive (MP600)"
+        },
+        {
+          "Key": "VolumeSerialNumber",
+          "Value": "AE5A2678"
+        }
+      ]
+    },
+    {
+      "Key": "Disk",
+      "Value": [
+        {
+          "Key": "Disk Drive",
+          "Value": "\\\\.\\PHYSICALDRIVE2"
+        },
+        {
+          "Key": "Drive Type",
+          "Value": "SSD"
+        },
+        {
+          "Key": "Availability",
+          "Value": "N/A"
+        },
+        {
+          "Key": "BytesPerSector",
+          "Value": 512
+        },
+        {
+          "Key": "Capabilities",
+          "Value": "3, 4"
+        },
+        {
+          "Key": "CapabilityDescriptions",
+          "Value": "Random Access, Supports Writing"
+        },
+        {
+          "Key": "Caption",
+          "Value": "Force MP600"
+        },
+        {
+          "Key": "CompressionMethod",
+          "Value": "N/A"
+        },
+        {
+          "Key": "ConfigManagerErrorCode",
+          "Value": 0
+        },
+        {
+          "Key": "ConfigManagerUserConfig",
+          "Value": false
+        },
+        {
+          "Key": "CreationClassName",
+          "Value": "Win32_DiskDrive"
+        },
+        {
+          "Key": "DefaultBlockSize",
+          "Value": "N/A"
+        },
+        {
+          "Key": "Description",
+          "Value": "Disk drive"
+        },
+        {
+          "Key": "DeviceID",
+          "Value": "\\\\.\\PHYSICALDRIVE2"
+        },
+        {
+          "Key": "ErrorCleared",
+          "Value": "N/A"
+        },
+        {
+          "Key": "ErrorDescription",
+          "Value": "N/A"
+        },
+        {
+          "Key": "ErrorMethodology",
+          "Value": "N/A"
+        },
+        {
+          "Key": "FirmwareRevision",
+          "Value": "EGFM13.0"
+        },
+        {
+          "Key": "Index",
+          "Value": 2
+        },
+        {
+          "Key": "InstallDate",
+          "Value": "N/A"
+        },
+        {
+          "Key": "InterfaceType",
+          "Value": "SCSI"
+        },
+        {
+          "Key": "LastErrorCode",
+          "Value": "N/A"
+        },
+        {
+          "Key": "Manufacturer",
+          "Value": "(Standard disk drives)"
+        },
+        {
+          "Key": "MaxBlockSize",
+          "Value": "N/A"
+        },
+        {
+          "Key": "MaxMediaSize",
+          "Value": "N/A"
+        },
+        {
+          "Key": "MediaLoaded",
+          "Value": true
+        },
+        {
+          "Key": "MediaType",
+          "Value": "Fixed hard disk media"
+        },
+        {
+          "Key": "MinBlockSize",
+          "Value": "N/A"
+        },
+        {
+          "Key": "Model",
+          "Value": "Force MP600"
+        },
+        {
+          "Key": "Name",
+          "Value": "\\\\.\\PHYSICALDRIVE2"
+        },
+        {
+          "Key": "NeedsCleaning",
+          "Value": "N/A"
+        },
+        {
+          "Key": "NumberOfMediaSupported",
+          "Value": "N/A"
+        },
+        {
+          "Key": "Partitions",
+          "Value": 1
+        },
+        {
+          "Key": "PNPDeviceID",
+          "Value": "SCSI\\DISK&VEN_NVME&PROD_FORCE_MP600\\9&460398E&0&000000"
+        },
+        {
+          "Key": "PowerManagementCapabilities",
+          "Value": "N/A"
+        },
+        {
+          "Key": "PowerManagementSupported",
+          "Value": "N/A"
+        },
+        {
+          "Key": "SCSIBus",
+          "Value": 0
+        },
+        {
+          "Key": "SCSILogicalUnit",
+          "Value": 0
+        },
+        {
+          "Key": "SCSIPort",
+          "Value": 4
+        },
+        {
+          "Key": "SCSITargetId",
+          "Value": 0
+        },
+        {
+          "Key": "SectorsPerTrack",
+          "Value": 63
+        },
+        {
+          "Key": "SerialNumber",
+          "Value": "6479_A74E_A020_09BC."
+        },
+        {
+          "Key": "Signature",
+          "Value": "N/A"
+        },
+        {
+          "Key": "Size",
+          "Value": "931.51 GB"
+        },
+        {
+          "Key": "Status",
+          "Value": "OK"
+        },
+        {
+          "Key": "StatusInfo",
+          "Value": "N/A"
+        },
+        {
+          "Key": "SystemCreationClassName",
+          "Value": "Win32_ComputerSystem"
+        },
+        {
+          "Key": "SystemName",
+          "Value": "SLURRPS-DT"
+        },
+        {
+          "Key": "TotalCylinders",
+          "Value": 121601
+        },
+        {
+          "Key": "TotalHeads",
+          "Value": 255
+        },
+        {
+          "Key": "TotalSectors",
+          "Value": 1953520065
+        },
+        {
+          "Key": "TotalTracks",
+          "Value": 31008255
+        },
+        {
+          "Key": "TracksPerCylinder",
+          "Value": 255
+        }
+      ]
+    },
+    {
+      "Key": "Partition 0",
+      "Value": [
+        {
+          "Key": "Partition",
+          "Value": "Disk #2, Partition #0"
+        },
+        {
+          "Key": "Access",
+          "Value": "N/A"
+        },
+        {
+          "Key": "Availability",
+          "Value": "N/A"
+        },
+        {
+          "Key": "BlockSize",
+          "Value": 512
+        },
+        {
+          "Key": "Bootable",
+          "Value": false
+        },
+        {
+          "Key": "BootPartition",
+          "Value": false
+        },
+        {
+          "Key": "Caption",
+          "Value": "Disk #2, Partition #0"
+        },
+        {
+          "Key": "ConfigManagerErrorCode",
+          "Value": "N/A"
+        },
+        {
+          "Key": "ConfigManagerUserConfig",
+          "Value": "N/A"
+        },
+        {
+          "Key": "CreationClassName",
+          "Value": "Win32_DiskPartition"
+        },
+        {
+          "Key": "Description",
+          "Value": "GPT: Basic Data"
+        },
+        {
+          "Key": "DeviceID",
+          "Value": "Disk #2, Partition #0"
+        },
+        {
+          "Key": "DiskIndex",
+          "Value": 2
+        },
+        {
+          "Key": "ErrorCleared",
+          "Value": "N/A"
+        },
+        {
+          "Key": "ErrorDescription",
+          "Value": "N/A"
+        },
+        {
+          "Key": "ErrorMethodology",
+          "Value": "N/A"
+        },
+        {
+          "Key": "HiddenSectors",
+          "Value": "N/A"
+        },
+        {
+          "Key": "Index",
+          "Value": 0
+        },
+        {
+          "Key": "InstallDate",
+          "Value": "N/A"
+        },
+        {
+          "Key": "LastErrorCode",
+          "Value": "N/A"
+        },
+        {
+          "Key": "Name",
+          "Value": "Disk #2, Partition #0"
+        },
+        {
+          "Key": "NumberOfBlocks",
+          "Value": 1953488896
+        },
+        {
+          "Key": "PNPDeviceID",
+          "Value": "N/A"
+        },
+        {
+          "Key": "PowerManagementCapabilities",
+          "Value": "N/A"
+        },
+        {
+          "Key": "PowerManagementSupported",
+          "Value": "N/A"
+        },
+        {
+          "Key": "PrimaryPartition",
+          "Value": true
+        },
+        {
+          "Key": "Purpose",
+          "Value": "N/A"
+        },
+        {
+          "Key": "RewritePartition",
+          "Value": "N/A"
+        },
+        {
+          "Key": "Size",
+          "Value": "931.50 GB"
+        },
+        {
+          "Key": "StartingOffset",
+          "Value": 16777216
+        },
+        {
+          "Key": "Status",
+          "Value": "N/A"
+        },
+        {
+          "Key": "StatusInfo",
+          "Value": "N/A"
+        },
+        {
+          "Key": "SystemCreationClassName",
+          "Value": "Win32_ComputerSystem"
+        },
+        {
+          "Key": "SystemName",
+          "Value": "SLURRPS-DT"
+        },
+        {
+          "Key": "Type",
+          "Value": "GPT: Basic Data"
+        }
+      ]
+    }
+  ]
+]

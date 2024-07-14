@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace WMI_Win32_Query.Collections
 {
     /// <summary>
-    /// A Win32_Book holds a Dictionary of all properties from a Win32 Class
+    /// A Win32Book holds a Dictionary of all properties from a Win32 Class
     /// </summary>
     public class Win32_Book : IEnumerable<KeyValuePair<string, object>>
     {

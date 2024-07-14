@@ -20,3 +20,15 @@ E:\Programming\3 - GitHub\WMI-Window-Query\WMI Test\obj\Debug\WMI Test.csproj.Co
 E:\Programming\3 - GitHub\WMI-Window-Query\WMI Test\obj\Debug\WMI Test.csproj.CopyComplete
 E:\Programming\3 - GitHub\WMI-Window-Query\WMI Test\obj\Debug\WMI Test.exe
 E:\Programming\3 - GitHub\WMI-Window-Query\WMI Test\obj\Debug\WMI Test.pdb
+H:\04 - Programming\03 - GitHub\WMI-Window-Query\WMI Test\obj\Debug\WMI Test.csproj.AssemblyReference.cache
+H:\04 - Programming\03 - GitHub\WMI-Window-Query\WMI Test\obj\Debug\WMI Test.csproj.CoreCompileInputs.cache
+H:\04 - Programming\03 - GitHub\WMI-Window-Query\WMI Test\obj\Debug\WMI Test.exe
+H:\04 - Programming\03 - GitHub\WMI-Window-Query\WMI Test\obj\Debug\WMI Test.pdb
+H:\04 - Programming\03 - GitHub\WMI-Window-Query\WMI Test\bin\Debug\WMI Test.exe.config
+H:\04 - Programming\03 - GitHub\WMI-Window-Query\WMI Test\bin\Debug\WMI Test.exe
+H:\04 - Programming\03 - GitHub\WMI-Window-Query\WMI Test\bin\Debug\WMI Test.pdb
+H:\04 - Programming\03 - GitHub\WMI-Window-Query\WMI Test\bin\Debug\WMI_Win32_Query.dll
+H:\04 - Programming\03 - GitHub\WMI-Window-Query\WMI Test\bin\Debug\WMI_Win32_Query.pdb
+H:\04 - Programming\03 - GitHub\WMI-Window-Query\WMI Test\obj\Debug\WMI Test.csproj.Up2Date
+H:\04 - Programming\03 - GitHub\WMI-Window-Query\WMI Test\bin\Debug\Newtonsoft.Json.dll
+H:\04 - Programming\03 - GitHub\WMI-Window-Query\WMI Test\bin\Debug\Newtonsoft.Json.xml

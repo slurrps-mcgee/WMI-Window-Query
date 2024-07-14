@@ -6,6 +6,7 @@ using System.Management;
 using System.Text;
 using System.Threading.Tasks;
 using WMI_Win32_Query.Collections;
+using WMI_Win32_Query.Helpers;
 
 namespace WMI_Win32_Query.Queries
 {
@@ -96,7 +97,7 @@ namespace WMI_Win32_Query.Queries
         /// <returns>float</returns>
         public static float TotalSpace(Win32_Book driveDict)
         {
-            return ConversionToGig(Convert.ToInt64(driveDict.GetValueByKey("Size")));
+            return ConversionHelper.ConversionToGig(Convert.ToInt64(driveDict.GetValueByKey("Size")));
         }
 
         /// <summary>
@@ -106,7 +107,7 @@ namespace WMI_Win32_Query.Queries
         /// <returns>float</returns>
         public static float UsedSpace(Win32_Book driveDict)
         {
-            return (ConversionToGig(Convert.ToInt64(driveDict.GetValueByKey("Size"))) - ConversionToGig(Convert.ToInt64(driveDict.GetValueByKey("FreeSpace"))));
+            return (ConversionHelper.ConversionToGig(Convert.ToInt64(driveDict.GetValueByKey("Size"))) - ConversionHelper.ConversionToGig(Convert.ToInt64(driveDict.GetValueByKey("FreeSpace"))));
         }
         #endregion
 
@@ -291,7 +292,7 @@ namespace WMI_Win32_Query.Queries
                                 {
                                     if (property.Name == "Size" || property.Name == "FreeSpace")
                                     {
-                                        disk.Add(property.Name, $"{ConversionToGig(Convert.ToInt64(property.Value)).ToString("n2")} GB");
+                                        disk.Add(property.Name, $"{ConversionHelper.ConversionToGig(Convert.ToInt64(property.Value)).ToString("n2")} GB");
                                     }
                                     else
                                     {
@@ -372,7 +373,7 @@ namespace WMI_Win32_Query.Queries
                         {
                             if (property.Name == "Size" || property.Name == "FreeSpace")
                             {
-                                partition.Add(property.Name, $"{ConversionToGig(Convert.ToInt64(property.Value)).ToString("n2")} GB");
+                                partition.Add(property.Name, $"{ConversionHelper.ConversionToGig(Convert.ToInt64(property.Value)).ToString("n2")} GB");
                             }
                             else
                             {
@@ -498,54 +499,6 @@ namespace WMI_Win32_Query.Queries
 
             return type;
         }
-        #endregion
-
-        #region Conversion Functions
-        #region Conversion Variables
-        //Constants for conveersions of different byt sizes
-        private const float FLOAT_GIG_CONVERSION = 1073741824f; //Holds the float conversion number of GB per bit
-        private const float FLOAT_TERA_CONVERSION = 0.0009765625F;//Holds the float conversion number for TB per bit
-        #endregion
-
-        /// <summary>
-        /// Converts a provided Megabyte float to Gigabytes
-        /// </summary>
-        /// <param name="conversionNum"></param>
-        /// <returns>float</returns>
-        public static float ConversionToGig(float conversionNum)
-        {
-            //Pre: Needs conversionNum to be initialized
-            //Post: Returns gigConversion number to the program
-            //Purpose: To convert the bytes number that is incoming to gigabytes
-
-            //Set the gigConversion to 0
-            float gigConversion;
-            //Grabs the conversionNum from the one passed into the function then 
-            //divides by the Float_GIG_CONVERSION Constant
-            gigConversion = conversionNum / FLOAT_GIG_CONVERSION;
-
-            return gigConversion; //Returns the variable gigConversion
-        }//End ConversionToGig
-
-        /// <summary>
-        /// Converts a provided Gigabyte float to Terabytes
-        /// </summary>
-        /// <param name="ConversionNum"></param>
-        /// <returns>float</returns>
-        public static float ConversionToTer(float ConversionNum)
-        {
-            //Pre: Needs conversionNum to be initialized
-            //Post: Returns teraConversion number to the program
-            //Purpose: To convert the bytes number that is incoming to terabytes
-
-            //Set the teraConversion to 0
-            float teraConversion;
-            //Grabs the conversionNum from the one passed into the function then 
-            //divides by the Float_TERA_CONVERSION Constant
-            teraConversion = ConversionNum / FLOAT_TERA_CONVERSION;
-
-            return teraConversion;
-        }//End ConversionToTer
         #endregion
 
         #endregion

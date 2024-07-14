@@ -10,3 +10,12 @@ E:\Programming\3 - GitHub\WMI-Window-Query\WMI_Win32_Query\obj\Debug\WMI_Win32_Q
 E:\Programming\3 - GitHub\WMI-Window-Query\WMI_Win32_Query\obj\Debug\WMI_Win32_Query.csproj.CoreCompileInputs.cache
 E:\Programming\3 - GitHub\WMI-Window-Query\WMI_Win32_Query\obj\Debug\WMI_Win32_Query.dll
 E:\Programming\3 - GitHub\WMI-Window-Query\WMI_Win32_Query\obj\Debug\WMI_Win32_Query.pdb
+H:\04 - Programming\03 - GitHub\WMI-Window-Query\WMI_Win32_Query\obj\Debug\WMI_Win32_Query.csproj.AssemblyReference.cache
+H:\04 - Programming\03 - GitHub\WMI-Window-Query\WMI_Win32_Query\obj\Debug\WMI_Win32_Query.csproj.CoreCompileInputs.cache
+H:\04 - Programming\03 - GitHub\WMI-Window-Query\WMI_Win32_Query\obj\Debug\WMI_Win32_Query.dll
+H:\04 - Programming\03 - GitHub\WMI-Window-Query\WMI_Win32_Query\obj\Debug\WMI_Win32_Query.pdb
+H:\04 - Programming\03 - GitHub\WMI-Window-Query\WMI_Win32_Query\bin\Debug\WMI_Win32_Query.dll
+H:\04 - Programming\03 - GitHub\WMI-Window-Query\WMI_Win32_Query\bin\Debug\WMI_Win32_Query.pdb
+H:\04 - Programming\03 - GitHub\WMI-Window-Query\WMI_Win32_Query\bin\Debug\Newtonsoft.Json.dll
+H:\04 - Programming\03 - GitHub\WMI-Window-Query\WMI_Win32_Query\bin\Debug\Newtonsoft.Json.xml
+H:\04 - Programming\03 - GitHub\WMI-Window-Query\WMI_Win32_Query\obj\Debug\WMI_Win3.18B5DAD8.Up2Date
