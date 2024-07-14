@@ -1,0 +1,119 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "H:\\04 - Programming\\03 - GitHub\\WMI-Window-Query\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{419DBD3B-0E97-4A8A-9834-422999ABDF91}|WMI_Win32_Query\\WMI_Win32_Query.csproj|h:\\04 - programming\\03 - github\\wmi-window-query\\wmi_win32_query\\queries\\drive_query.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{419DBD3B-0E97-4A8A-9834-422999ABDF91}|WMI_Win32_Query\\WMI_Win32_Query.csproj|solutionrelative:wmi_win32_query\\queries\\drive_query.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{419DBD3B-0E97-4A8A-9834-422999ABDF91}|WMI_Win32_Query\\WMI_Win32_Query.csproj|H:\\04 - Programming\\03 - GitHub\\WMI-Window-Query\\wmi_win32_query\\collections\\win32_library.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{419DBD3B-0E97-4A8A-9834-422999ABDF91}|WMI_Win32_Query\\WMI_Win32_Query.csproj|solutionrelative:wmi_win32_query\\collections\\win32_library.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{419DBD3B-0E97-4A8A-9834-422999ABDF91}|WMI_Win32_Query\\WMI_Win32_Query.csproj|H:\\04 - Programming\\03 - GitHub\\WMI-Window-Query\\wmi_win32_query\\collections\\win32_book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{419DBD3B-0E97-4A8A-9834-422999ABDF91}|WMI_Win32_Query\\WMI_Win32_Query.csproj|solutionrelative:wmi_win32_query\\collections\\win32_book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{419DBD3B-0E97-4A8A-9834-422999ABDF91}|WMI_Win32_Query\\WMI_Win32_Query.csproj|H:\\04 - Programming\\03 - GitHub\\WMI-Window-Query\\wmi_win32_query\\helpers\\conversionhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{419DBD3B-0E97-4A8A-9834-422999ABDF91}|WMI_Win32_Query\\WMI_Win32_Query.csproj|solutionrelative:wmi_win32_query\\helpers\\conversionhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{419DBD3B-0E97-4A8A-9834-422999ABDF91}|WMI_Win32_Query\\WMI_Win32_Query.csproj|H:\\04 - Programming\\03 - GitHub\\WMI-Window-Query\\wmi_win32_query\\helpers\\helpers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{419DBD3B-0E97-4A8A-9834-422999ABDF91}|WMI_Win32_Query\\WMI_Win32_Query.csproj|solutionrelative:wmi_win32_query\\helpers\\helpers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91717052-EC44-4571-BED7-15857AD1841A}|WMI Test\\WMI Test.csproj|H:\\04 - Programming\\03 - GitHub\\WMI-Window-Query\\wmi test\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91717052-EC44-4571-BED7-15857AD1841A}|WMI Test\\WMI Test.csproj|solutionrelative:wmi test\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "H:\\04 - Programming\\03 - GitHub\\WMI-Window-Query\\WMI Test\\Program.cs",
+              "RelativeDocumentMoniker": "WMI Test\\Program.cs",
+              "ToolTip": "H:\\04 - Programming\\03 - GitHub\\WMI-Window-Query\\WMI Test\\Program.cs",
+              "RelativeToolTip": "WMI Test\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAyAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-14T18:06:14.458Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Helpers.cs",
+              "DocumentMoniker": "H:\\04 - Programming\\03 - GitHub\\WMI-Window-Query\\WMI_Win32_Query\\Helpers\\Helpers.cs",
+              "RelativeDocumentMoniker": "WMI_Win32_Query\\Helpers\\Helpers.cs",
+              "ToolTip": "H:\\04 - Programming\\03 - GitHub\\WMI-Window-Query\\WMI_Win32_Query\\Helpers\\Helpers.cs",
+              "RelativeToolTip": "WMI_Win32_Query\\Helpers\\Helpers.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAABOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-14T18:12:23.658Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ConversionHelper.cs",
+              "DocumentMoniker": "H:\\04 - Programming\\03 - GitHub\\WMI-Window-Query\\WMI_Win32_Query\\Helpers\\ConversionHelper.cs",
+              "RelativeDocumentMoniker": "WMI_Win32_Query\\Helpers\\ConversionHelper.cs",
+              "ToolTip": "H:\\04 - Programming\\03 - GitHub\\WMI-Window-Query\\WMI_Win32_Query\\Helpers\\ConversionHelper.cs",
+              "RelativeToolTip": "WMI_Win32_Query\\Helpers\\ConversionHelper.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACkAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-14T18:09:09.047Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Win32_Book.cs",
+              "DocumentMoniker": "H:\\04 - Programming\\03 - GitHub\\WMI-Window-Query\\WMI_Win32_Query\\Collections\\Win32_Book.cs",
+              "RelativeDocumentMoniker": "WMI_Win32_Query\\Collections\\Win32_Book.cs",
+              "ToolTip": "H:\\04 - Programming\\03 - GitHub\\WMI-Window-Query\\WMI_Win32_Query\\Collections\\Win32_Book.cs",
+              "RelativeToolTip": "WMI_Win32_Query\\Collections\\Win32_Book.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-14T18:06:14.482Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Win32_Library.cs",
+              "DocumentMoniker": "H:\\04 - Programming\\03 - GitHub\\WMI-Window-Query\\WMI_Win32_Query\\Collections\\Win32_Library.cs",
+              "RelativeDocumentMoniker": "WMI_Win32_Query\\Collections\\Win32_Library.cs",
+              "ToolTip": "H:\\04 - Programming\\03 - GitHub\\WMI-Window-Query\\WMI_Win32_Query\\Collections\\Win32_Library.cs",
+              "RelativeToolTip": "WMI_Win32_Query\\Collections\\Win32_Library.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAHUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-14T18:06:14.483Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Drive_Query.cs",
+              "DocumentMoniker": "H:\\04 - Programming\\03 - GitHub\\WMI-Window-Query\\WMI_Win32_Query\\Queries\\Drive_Query.cs",
+              "RelativeDocumentMoniker": "WMI_Win32_Query\\Queries\\Drive_Query.cs",
+              "ToolTip": "H:\\04 - Programming\\03 - GitHub\\WMI-Window-Query\\WMI_Win32_Query\\Queries\\Drive_Query.cs",
+              "RelativeToolTip": "WMI_Win32_Query\\Queries\\Drive_Query.cs",
+              "ViewState": "AQIAAH4AAAAAAAAAAAAIwI0AAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-14T18:06:14.613Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
